@@ -1,75 +1,90 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
+import styled from "styled-components"
+import Link from "./styled/Link"
 
-import { rhythm, scale } from "../utils/typography"
+import "../global.css"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 640px) 1fr;
+  grid-template-areas:
+    "header header header"
+    "left content right"
+    "footer footer footer";
+`
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
+const Header = styled.header`
+  grid-area: header;
+`
+
+const Nav = styled.nav`
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+`
+
+const Footer = styled.footer`
+  grid-area: footer;
+`
+
+const Content = styled.main`
+  grid-area: content;
+`
+
+const Layout = ({ location, title, children }) => {
+  const data = useStaticQuery(graphql`
+    query NavQuery {
+      logo: file(absolutePath: { regex: "/davejs-logo-white.webp/" }) {
+        childImageSharp {
+          fixed(width: 92, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+  `)
+  const rootPath = `${__PATH_PREFIX__}/`
+  let header
+
+  if (location.pathname === rootPath) {
+    header = (
+      <h1>
+        {/* <Link to={`/`}> */}
+        <Image fixed={data.logo.childImageSharp.fixed} alt={title} />
+        {/* </Link> */}
+      </h1>
+    )
+  } else {
+    header = (
+      <h3>
+        <Link to={`/`}>{title}</Link>
+      </h3>
     )
   }
+  return (
+    <Container>
+      <Header>
+        <Nav>
+          {header}
+          <Link to="/">about me</Link>
+          <Link to="/projects">projects</Link>
+          <Link to="/blog">blog</Link>
+        </Nav>
+      </Header>
+      <Content>{children}</Content>
+      <Footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </Footer>
+    </Container>
+  )
 }
 
 export default Layout

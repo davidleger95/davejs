@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i&display=swap");
+
+/* Theme */
+:root {
+  --primary-color: #ff1c95;
+  --background-color: #0b132c;
+  --text-color: #e0e1e5;
+
+  --dark: #111;
+
+  --red: pink;
+  --purple: magenta;
+  --yellow: gold;
+  --teal: teal;
+  --gray: #888;
+
+  font-family: "Roboto Mono", monospace;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  color: inherit;
+}
+
+/* Syntax highlighting */
+
+pre {
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--red);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+code {
+  font-family: inherit;
+}
+
+.comment {
+  color: var(--gray);
+}
+
+.keyword {
+  color: var(--purple);
+}
+
+.string,
+.template-string {
+  color: lime;
+}
+
+.template-string > .interpolation {
+  color: var(--text-color);
+}
+
+.template-string > .interpolation > .interpolation-punctuation.punctuation {
+  color: var(--purple);
+}
+
+.number,
+.boolean {
+  color: orangered;
+}
+
+.operator {
+  color: var(--teal);
+}
+
+.function {
+  color: blue;
+}
+
+.class-name,
+.constant {
+  color: var(--yellow);
+}
+
+.punctuation {
+  color: var(--text-color);
+}
