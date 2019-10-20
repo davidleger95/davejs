@@ -25,7 +25,7 @@ const Nav = styled.nav`
   align-items: center;
   grid-auto-flow: column;
   grid-gap: 2rem;
-  max-width: 800px;
+  max-width: 820px;
   margin: auto;
 `
 
@@ -40,7 +40,14 @@ const Content = styled.main`
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
     query NavQuery {
-      logo: file(absolutePath: { regex: "/davejs-logo-white.webp/" }) {
+      logoLight: file(absolutePath: { regex: "/davejs-logo-dark.webp/" }) {
+        childImageSharp {
+          fixed(width: 92, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      logoDark: file(absolutePath: { regex: "/davejs-logo-white.webp/" }) {
         childImageSharp {
           fixed(width: 92, height: 50) {
             ...GatsbyImageSharpFixed
@@ -56,7 +63,12 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1>
         {/* <Link to={`/`}> */}
-        <Image fixed={data.logo.childImageSharp.fixed} alt={title} />
+        <div data-theme="light">
+          <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
+        </div>
+        <div data-theme="dark">
+          <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
+        </div>
         {/* </Link> */}
       </h1>
     )

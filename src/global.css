@@ -19,6 +19,28 @@
   background-color: var(--background-color);
 }
 
+[data-theme="light"] {
+  display: none;
+}
+[data-theme="dark"] {
+  display: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #ff1c95;
+    --background-color: #e0e1e5;
+    --text-color: #0b132c;
+  }
+
+  [data-theme="light"] {
+    display: inherit;
+  }
+  [data-theme="dark"] {
+    display: none;
+  }
+}
+
 a {
   color: inherit;
 }
