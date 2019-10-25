@@ -4,18 +4,16 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: content/home.md
-  label: Home
-  match: "**/*"
-  read_only: false
-- type: heading
-  label: Pages
 - type: directory
   path: content/blog
   label: Blog
   create: all
   match: "*"
+- type: heading
+  label: Pages
+- type: document
+  path: content/home.md
+  label: Home
 upload_dir: content/assets
 public_path: ''
 front_matter_path: ''
