@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/home.md
+  label: Home
+  match: "**/*"
+  read_only: false
+- type: heading
+  label: Pages
 - type: directory
   path: content/blog
   label: Blog
