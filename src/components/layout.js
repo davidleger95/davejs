@@ -63,6 +63,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1>
         {/* <Link to={`/`}> */}
+        {/* HACK: swap out logo for light/dark theme */}
         <div data-theme="light">
           <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
         </div>
