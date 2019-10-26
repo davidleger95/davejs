@@ -1,65 +1,61 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Link from "../components/styled/Link"
+import Image from "gatsby-image"
+import styled from "styled-components"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const Container = styled.main`
+  margin: 20vh 0;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 100px;
+  align-items: center;
+`
+
+const Lead = styled.p`
+  margin: 0;
+  font-size: 1.2em;
+`
+
+const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const { lead } = data.home
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+      <Container>
+        <Lead>{lead}</Lead>
+        <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
+      </Container>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
-  query {
+  query HOME_PAGE {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+    avatar: file(absolutePath: { regex: "/davejs-profile.png/" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
         }
+      }
+    }
+    home: pagesYaml(title: { eq: "home" }) {
+      id
+      title
+      lead
+      image {
+        alt
       }
     }
   }

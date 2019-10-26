@@ -1,10 +1,10 @@
 ---
-title: New Beginnings
+title: A Blog Post
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
 
-```js
+```js{numberLines: true}
 const hello = 'hey';
 const ONE = 1;
 
@@ -15,6 +15,22 @@ const cond = hello ? true : false;
 function func(a, b) {
   const string = `Hello ${a - b}`;
   return a + b;
+}
+```
+
+```css
+.selection {
+  display: block;
+  color: var(--primary);
+  margin: 2em
+}
+
+:root {
+  /* a comment */
+}
+
+[data-tag="string"] {
+  color: red;
 }
 ```
 

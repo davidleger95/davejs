@@ -7,8 +7,11 @@ import Link from "./styled/Link"
 import "../global.css"
 
 const Container = styled.div`
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr minmax(auto, 640px) 1fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 1rem;
   grid-template-areas:
     "header header header"
     "left content right"
@@ -16,6 +19,7 @@ const Container = styled.div`
 `
 
 const Header = styled.header`
+  padding: 0 1rem;
   grid-area: header;
 `
 
@@ -31,6 +35,11 @@ const Nav = styled.nav`
 
 const Footer = styled.footer`
   grid-area: footer;
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--gray);
+  background-color: rgba(255, 255, 255, 0.05);
 `
 
 const Content = styled.main`
@@ -40,46 +49,36 @@ const Content = styled.main`
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
     query NavQuery {
-      logoLight: file(absolutePath: { regex: "/davejs-logo-dark.webp/" }) {
+      logoLight: file(absolutePath: { regex: "/davejs-logo-dark.png/" }) {
         childImageSharp {
           fixed(width: 92, height: 50) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
-      logoDark: file(absolutePath: { regex: "/davejs-logo-white.webp/" }) {
+      logoDark: file(absolutePath: { regex: "/davejs-logo-white.png/" }) {
         childImageSharp {
           fixed(width: 92, height: 50) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
     }
   `)
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1>
-        {/* <Link to={`/`}> */}
-        {/* HACK: swap out logo for light/dark theme */}
-        <div data-theme="light">
-          <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
-        </div>
-        <div data-theme="dark">
-          <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
-        </div>
-        {/* </Link> */}
-      </h1>
-    )
-  } else {
-    header = (
-      <h3>
-        <Link to={`/`}>{title}</Link>
-      </h3>
-    )
-  }
+  const header = (
+    <h1>
+      {/* <Link to={`/`}> */}
+      {/* HACK: swap out logo for light/dark theme */}
+      <picture data-theme="light">
+        <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
+      </picture>
+      <picture data-theme="dark">
+        <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
+      </picture>
+      {/* </Link> */}
+    </h1>
+  )
   return (
     <Container>
       <Header>
@@ -91,11 +90,7 @@ const Layout = ({ location, title, children }) => {
         </Nav>
       </Header>
       <Content>{children}</Content>
-      <Footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </Footer>
+      <Footer>(c) {new Date().getFullYear()}, David Leger</Footer>
     </Container>
   )
 }
