@@ -26,5 +26,5 @@ fields:
     config:
       required: false
     label: Alt Text
-  label: Profile Image
+  label: Profile Picture
   description: A picture of me.
