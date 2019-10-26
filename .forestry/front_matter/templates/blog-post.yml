@@ -1,4 +1,38 @@
 ---
 label: Blog Post
-hide_body: true
-fields: []
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: Published on
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: header_image
+  type: file
+  config:
+    maxSize: 250
+  label: Header Image
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Meta description. Put lots of buzzwords in here for SEO.
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
