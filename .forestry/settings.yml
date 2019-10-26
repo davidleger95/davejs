@@ -8,7 +8,7 @@ sections:
   path: content/blog
   label: Blog
   create: all
-  match: "*"
+  match: "**/*"
 - type: heading
   label: Pages
 - type: document
