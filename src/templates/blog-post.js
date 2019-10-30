@@ -18,8 +18,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <h1>{post.frontmatter.title}</h1>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
@@ -27,25 +27,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Bio />
         </footer>
       </article>
-
-      <nav>
-        <ul>
-          <li>
+      {(previous || next) && (
+        <nav>
+          <ul>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              <li>
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              </li>
             )}
-          </li>
-          <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              <li>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </li>
             )}
-          </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      )}
     </Layout>
   )
 }

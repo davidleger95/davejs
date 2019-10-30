@@ -6,6 +6,8 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import accent from "../components/davejs-lead-accent.png"
+
 const Container = styled.main`
   margin: 20vh 0;
   display: grid;
@@ -15,8 +17,25 @@ const Container = styled.main`
 `
 
 const Lead = styled.p`
+  position: relative;
   margin: 0;
   font-size: 1.2em;
+
+  &::before {
+    --size: 1.2em;
+    --offset: calc(-0.6 * var(--size));
+
+    display: block;
+    background-image: url(${accent});
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+    top: var(--offset);
+    left: var(--offset);
+  }
 `
 
 const HomePage = ({ data, location }) => {

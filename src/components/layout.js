@@ -39,7 +39,8 @@ const Footer = styled.footer`
   font-size: 0.8rem;
   text-align: center;
   color: var(--gray);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--dark);
+  margin-top: 2rem;
 `
 
 const Content = styled.main`
@@ -85,7 +86,6 @@ const Layout = ({ location, title, children }) => {
         <Nav>
           {header}
           <Link to="/">about me</Link>
-          <Link to="/projects">projects</Link>
           <Link to="/blog">blog</Link>
         </Nav>
       </Header>

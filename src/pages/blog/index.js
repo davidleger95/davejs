@@ -1,10 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
 import Link from "../../components/styled/Link"
 
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+
+const Post = styled.article`
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #fff2;
+`
+
+const Title = styled.h3`
+  margin: 0;
+`
+const StyledDate = styled.small`
+  opacity: 0.75;
+  font-size: 0.8em;
+`
+const Excerpt = styled.p`
+  fopacity: 0.75;
+  font-size: 0.8em;
+`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -17,21 +37,21 @@ const BlogIndex = ({ data, location }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <Post key={node.fields.slug}>
             <header>
-              <h3>
+              <StyledDate>{node.frontmatter.date}</StyledDate>
+              <Title>
                 <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+              </Title>
             </header>
             <section>
-              <p
+              <Excerpt
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
             </section>
-          </article>
+          </Post>
         )
       })}
     </Layout>

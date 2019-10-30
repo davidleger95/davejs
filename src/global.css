@@ -11,6 +11,7 @@ body {
   --text-color: #e0e1e5;
 
   --dark: #0b132c;
+  --dark-2: #17244c;
 
   --red: pink;
   --purple: magenta;
@@ -20,7 +21,8 @@ body {
 
   font-family: "Roboto Mono", monospace;
   color: var(--text-color);
-  background-color: var(--background-color);
+
+  background: radial-gradient(circle, #17244c 0%, #0b132c 100%);
 }
 
 [data-theme="light"] {
