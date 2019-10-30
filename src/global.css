@@ -37,6 +37,7 @@ body {
     --primary-color: #ff1c95;
     --background-color: #e0e1e5;
     --text-color: #0b132c;
+    background: radial-gradient(circle, #e0e1e5 0%, #e0e1e5 100%);
   }
 
   [data-theme="light"] {
