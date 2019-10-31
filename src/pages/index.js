@@ -9,17 +9,25 @@ import SEO from "../components/seo"
 import accent from "../components/davejs-lead-accent.png"
 
 const Container = styled.main`
-  margin: 20vh 0;
+  margin: 15vh 0;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 100px;
   align-items: center;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Lead = styled.p`
   position: relative;
   margin: 0;
   font-size: 1.2em;
+
+  @media (max-width: 840px) {
+    margin-left: 0.5em;
+  }
 
   &::before {
     --size: 1.2em;
@@ -38,17 +46,41 @@ const Lead = styled.p`
   }
 `
 
+const Section = styled.section`
+  margin: 15vh 0;
+`
+
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { lead } = data.home
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+    <Layout location={location}>
+      <SEO title={`${siteTitle} | Web Developer & Designer`} />
       <Container>
         <Lead>{lead}</Lead>
         <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
       </Container>
+      <Section>
+        <h2>a bit about me</h2>
+        <p>
+          Hey! My name is David Leger and I'm a web developer living in Halifax,
+          Nova Scotia. I go by dave.js because I love writing JavaScript! I love
+          combining creativity with technical skills to design and build awesome
+          experiences on the web.
+        </p>
+        <p>
+          I currently work at{" "}
+          <a
+            href="https://manifold.co"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Manifold
+          </a>{" "}
+          building marketplaces for cloud services and APIs.
+        </p>
+      </Section>
     </Layout>
   )
 }

@@ -22,8 +22,8 @@ const StyledDate = styled.small`
   font-size: 0.8em;
 `
 const Excerpt = styled.p`
-  fopacity: 0.75;
-  font-size: 0.8em;
+  opacity: 0.75;
+  font-size: 1em;
 `
 
 const BlogIndex = ({ data, location }) => {
@@ -32,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Blog" />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
