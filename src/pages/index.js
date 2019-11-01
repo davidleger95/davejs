@@ -24,6 +24,7 @@ const Lead = styled.p`
   position: relative;
   margin: 0;
   font-size: 1.2em;
+  font-family: inherit;
 
   @media (max-width: 840px) {
     margin-left: 0.5em;

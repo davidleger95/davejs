@@ -37,7 +37,7 @@ body {
     --primary-color: #ff1c95;
     --background-color: #e0e1e5;
     --text-color: #0b132c;
-    background: radial-gradient(circle, #f8f8f8 0%, #e0e1e5 100%);
+    background-image: radial-gradient(circle, #f8f8f8 0%, #e0e1e5 100%);
   }
 
   [data-theme="light"] {
@@ -48,8 +48,11 @@ body {
   }
 }
 
-p {
+p,
+ul,
+li {
   line-height: 1.5;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 a {
   color: inherit;
@@ -64,7 +67,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #abb2bf;
   background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Roboto Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
