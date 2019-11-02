@@ -58,7 +58,7 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title={`${siteTitle} | Web Developer & Designer`} />
+      <SEO />
       <Container>
         <Lead>{lead}</Lead>
         <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />

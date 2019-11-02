@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `dave.js`,
     author: `David Leger`,
-    description: `I'm an artsy web developer.`,
-    siteUrl: `https://davejs.netlify.com/`,
+    shortDescription: `Web Developer & Designer`,
+    description: `I'm a frontend developer from Halifax, Canada. I'm passionate about creating great experiences on the web!`,
+    siteUrl: `https://davejs.dev/`,
     social: {
       twitter: `_davejs`,
       instagram: `_davejs`,
