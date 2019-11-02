@@ -2,15 +2,14 @@
   font-family: "Operator Mono";
   font-style: normal;
   font-weight: bold;
-  src: local("Operator Mono Bold"),
-    url("/OperatorMono-Bold.woff") format("woff");
+  src: local("Operator Mono"), url("/OperatorMono-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Operator Mono";
   font-style: italic;
   font-weight: bold;
-  src: local("Operator Mono Bold Italic"),
+  src: local("Operator Mono"),
     url("/OperatorMono-BoldItalic.woff") format("woff");
 }
 
@@ -25,7 +24,7 @@
   font-family: "Operator Mono";
   font-style: italic;
   font-weight: normal;
-  src: local("Operator Mono Italic"),
+  src: local("Operator Mono"),
     url("/OperatorMono-BookItalic.woff") format("woff");
 }
 
