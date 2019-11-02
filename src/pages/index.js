@@ -23,8 +23,9 @@ const Container = styled.main`
 const Lead = styled.p`
   position: relative;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-family: inherit;
+  font-style: italic;
 
   @media (max-width: 840px) {
     margin-left: 0.5em;

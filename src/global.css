@@ -1,4 +1,33 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i&display=swap");
+@font-face {
+  font-family: "Operator Mono";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Operator Mono Bold"),
+    url("/OperatorMono-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Operator Mono Bold Italic"),
+    url("/OperatorMono-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Operator Mono"), url("/OperatorMono-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Operator Mono";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Operator Mono Italic"),
+    url("/OperatorMono-BookItalic.woff") format("woff");
+}
 
 html,
 body {
@@ -19,7 +48,7 @@ body {
   --teal: teal;
   --gray: #888;
 
-  font-family: "Roboto Mono", monospace;
+  font-family: "Operator Mono", monospace;
   color: var(--text-color);
   background-color: var(--background-color);
   background-image: radial-gradient(circle, #17244c 0%, #0b132c 100%);
@@ -58,6 +87,13 @@ a {
   color: inherit;
 }
 
+blockquote p {
+  font-size: 1.35em;
+  font-family: inherit;
+  font-style: italic;
+  opacity: 0.8;
+}
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -67,7 +103,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #abb2bf;
   background: none;
-  font-family: "Roboto Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: "Operator Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
