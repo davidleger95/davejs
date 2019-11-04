@@ -2,6 +2,10 @@
 title: Strategies for Writing Maintainable Components in React
 date: "2019-09-11T22:12:03.284Z"
 description: "How to break React components down into more managable pieces to keep your code clean and readable."
+tags:
+  - javascript
+  - react
+  - tutorial
 ---
 
 _Cross-posted from the Manifold blog. [See the original post here.](https://www.manifold.co/blog/strategies-for-writing-maintainable-components-in-react)_

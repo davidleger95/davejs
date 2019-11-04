@@ -2,6 +2,9 @@
 title: How Pizza Is Influencing the Future of Web Accessibility
 date: "2019-10-15T22:12:03.284Z"
 description: "Accessibility is an often overlooked part of the user experience. A recent court ruling involving Domino's Pizza is setting legal precedence for requiring businesses to follow web accessibility guidelines."
+tags:
+  - accessibility
+  - opinion
 ---
 
 Everyone loves pizza, but do we all have equal access to pizza? As the pizza-ordering process has moved from phone calls to websites and apps, the ordering systems we use to get our cheesy goodness have variably left some pizza-lovers behind.

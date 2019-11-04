@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Link from "../../components/styled/Link"
+import { TagList, Tag } from "../../components/styled/Tag"
 
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
@@ -51,6 +52,15 @@ const BlogIndex = ({ data, location }) => {
                 }}
               />
             </section>
+            {node.frontmatter.tags && (
+              <section>
+                <TagList>
+                  {node.frontmatter.tags.map(tag => (
+                    <Tag key={tag}>{tag}</Tag>
+                  ))}
+                </TagList>
+              </section>
+            )}
           </Post>
         )
       })}
@@ -78,6 +88,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

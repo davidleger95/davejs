@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import { TagList, Tag } from "../components/styled/Tag"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,11 +16,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        meta={
+          post.tags && [
+            {
+              property: "keywords",
+              content: post.tags.join(","),
+            },
+          ]
+        }
       />
       <article>
         <header>
           <p>{post.frontmatter.date}</p>
           <h1>{post.frontmatter.title}</h1>
+          {post.frontmatter.tags && (
+            <TagList>
+              {post.frontmatter.tags.map(tag => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </TagList>
+          )}
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
@@ -69,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

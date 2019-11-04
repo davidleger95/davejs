@@ -2,6 +2,8 @@
 title: Why Code Reviews are Important
 date: "2017-05-01T22:12:03.284Z"
 description: "Code reviews are not only for catching mistakes and ensuring clean code. They can also be a great learning tool for junior or onboarding developers."
+tags:
+  - opinion
 ---
 
 Ah code reviews... That dreadful, tedious task that interrupts your focus and takes time away from meaningful work. I can’t count how many times my code has sat in PR (pull request, if you’re unfamiliar with git lingo), lonely and waiting for approval by my fellow developers. It’s understandable that people put off code review for the reasons I mentioned above and many more.
