@@ -53,7 +53,7 @@ const Section = styled.section`
 `
 
 const HomePage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  // const siteTitle = data.site.siteMetadata.title
   const { lead } = data.home
 
   return (

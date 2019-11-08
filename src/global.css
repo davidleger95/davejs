@@ -76,6 +76,32 @@ body {
   }
 }
 
+hr {
+  border: none;
+  background-color: white;
+  height: 0.25rem;
+  width: 0.25rem;
+  position: relative;
+  overflow: visible;
+  opacity: 0.5;
+  margin: 2rem auto;
+}
+
+hr::before,
+hr::after {
+  position: absolute;
+  left: -2rem;
+  content: "";
+  display: inherit;
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+}
+
+hr::after {
+  left: 2rem;
+}
+
 p,
 ul,
 li {
@@ -140,11 +166,17 @@ code[class*="language-"] ::selection {
     text-shadow: none;
   }
 }
+
+.gatsby-highlight {
+  max-width: calc(100vw - 2rem);
+}
 /* Code blocks */
 pre[class*="language-"] {
   padding: 0.5em;
   margin: 0.5em 0;
   overflow: auto;
+  display: block;
+  width: auto;
 }
 
 :not(pre) > code[class*="language-"],

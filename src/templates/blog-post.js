@@ -1,10 +1,36 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import styled from "styled-components"
 import { TagList, Tag } from "../components/styled/Tag"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const Header = styled.header`
+  display: grid;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+`
+
+const Title = styled.h1`
+  margin: 0;
+  font-size: 1.75rem;
+`
+
+const StyledDate = styled.small`
+  opacity: 0.75;
+`
+
+const BottomNav = styled.nav`
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5rem;
+  margin-top: 2.5rem;
+
+  & [rel="next"] {
+    text-align: right;
+  }
+`
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -26,9 +52,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         }
       />
       <article>
-        <header>
-          <p>{post.frontmatter.date}</p>
-          <h1>{post.frontmatter.title}</h1>
+        <Header>
+          <StyledDate>{post.frontmatter.date}</StyledDate>
+          <Title>{post.frontmatter.title}</Title>
           {post.frontmatter.tags && (
             <TagList>
               {post.frontmatter.tags.map(tag => (
@@ -36,7 +62,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ))}
             </TagList>
           )}
-        </header>
+        </Header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <footer>
@@ -44,24 +70,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </footer>
       </article>
       {(previous || next) && (
-        <nav>
-          <ul>
-            {previous && (
-              <li>
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {next && (
-              <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              </li>
-            )}
-          </ul>
-        </nav>
+        <BottomNav>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              &lt;= {previous.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} =&gt;
+            </Link>
+          )}
+        </BottomNav>
       )}
     </Layout>
   )
