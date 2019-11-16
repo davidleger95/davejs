@@ -28,5 +28,3 @@ fields:
     label: Alt Text
   label: Profile Picture
   description: A picture of me.
-pages:
-- content/home.md
