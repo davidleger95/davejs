@@ -53,9 +53,6 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
-- content/blog/pizza-and-web-accessibility/index.md
-- content/blog/why-code-reviews-are-important/index.md
-- content/blog/strategies-for-writing-maintainable-components-in-react/index.md
-- content/blog/embracing-webflow-as-a-frontend-developer.md
 - content/blog/dynamic-theming-with-css-variables.md
+- content/blog/embracing-webflow-as-a-frontend-developer.md
 - content/blog/perspectives-on-failure.md
