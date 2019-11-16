@@ -46,5 +46,11 @@ fields:
       required: false
     label: Alt Text
   label: Hero Image
+- name: shareImage
+  type: file
+  config:
+    maxSize: 250
+  label: Share Image
+  description: 'For Social Media '
 pages:
 - content/blog/pizza-and-web-accessibility/index.md
