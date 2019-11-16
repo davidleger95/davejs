@@ -1,16 +1,16 @@
 ---
-date: 2019-11-16T19:37:20Z
+date: 2019-11-16T19:37:20.000+00:00
 tags:
-  - opinion
-  - startups
+- opinion
+- startups
 title: Perspectives on Failure
 description: How I cope with constant failure while working at a startup.
 heroImage:
-  img: ../assets/failure.png
+  img: "../assets/failure-hero.png"
   alt: Cancel symbol
-shareImage: ../assets/failure-share-image.png
----
+shareImage: "../assets/failure-share-image-1.png"
 
+---
 Working for a startup, I see myself and coworkers experience failure almost on a daily basis. And sometimes they’re hard to reconcile. Like shipping a bug to production that broke user login for five days before we noticed. Or entirely scrapping a project that people put months of work into just days after launch. These failures are not small and they happen often enough that before we can even process one failure, another one is likely sneaking up behind us.
 
 We’re all familiar with the concept of learning from our failures. It’s something we’re told from an early age. For me, this feels like a coping mechanism for our biggest fuck-ups. We tell our selves _this is a learning opportunity_ and move on, often without feeling like we’ve learned anything. It seems healthy to approach failure with positivity. But I think we wrongly assume that there is some epiphany to be realized every time we fail, if only we just searched hard enough. In reality, sometimes failures are just wasted time, effort, money, what have you; and with little to of value to gain from it and our resilience to failure— ironically — fails.
