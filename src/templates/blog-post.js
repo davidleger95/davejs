@@ -14,7 +14,6 @@ const Header = styled.header`
 `
 
 const HeroImage = styled.div`
-  min-height: 300px;
   display: grid;
 `
 
@@ -123,12 +122,19 @@ export const pageQuery = graphql`
         heroImage {
           img {
             src: childImageSharp {
-              fluid(maxWidth: 800) {
+              fluid(maxWidth: 640) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           alt
+        }
+        shareImage {
+          src: childImageSharp {
+            fixed(width: 1200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
     }
