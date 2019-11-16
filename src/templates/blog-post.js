@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import styled from "styled-components"
 import { TagList, Tag } from "../components/styled/Tag"
 import Bio from "../components/bio"
@@ -10,6 +11,11 @@ const Header = styled.header`
   display: grid;
   grid-gap: 1rem;
   margin-bottom: 2rem;
+`
+
+const HeroImage = styled.div`
+  min-height: 300px;
+  display: grid;
 `
 
 const Title = styled.h1`
@@ -53,6 +59,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <Header>
+          {post.frontmatter.heroImage && (
+            <HeroImage>
+              <Image
+                fluid={post.frontmatter.heroImage.img.src.fluid}
+                alt={post.frontmatter.heroImage.alt}
+              />
+            </HeroImage>
+          )}
           <StyledDate>{post.frontmatter.date}</StyledDate>
           <Title>{post.frontmatter.title}</Title>
           {post.frontmatter.tags && (
@@ -106,6 +120,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        heroImage {
+          img {
+            src: childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
       }
     }
   }
