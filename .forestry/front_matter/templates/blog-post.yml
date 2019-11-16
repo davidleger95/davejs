@@ -53,7 +53,7 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
-- content/blog/dynamic-theming-with-css-variables.md
 - content/blog/embracing-webflow-as-a-frontend-developer.md
+- content/blog/dynamic-theming-with-css-variables.md
 - content/blog/perspectives-on-failure.md
 - content/blog/pizza-and-web-accessibility/index.md

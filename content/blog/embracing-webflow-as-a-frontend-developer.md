@@ -1,5 +1,5 @@
 ---
-date: 2018-05-28T21:06:17Z
+date: 2018-05-28T21:06:17.000+00:00
 tags:
 - opinion
 - webflow
@@ -10,7 +10,7 @@ description: Development doesn't always have to be done with code. Tools like We
 heroImage:
   img: "../assets/webflow.png"
   alt: Embracing Webflow as a Frontend Developer
-shareImage: ''
+shareImage: "../assets/webflow.png"
 
 ---
 Throughout the rather short history of software development, there have been many evolutions in the tools we use to build software. Despite the very nature of software development being rapid change, there’s always been a resistant, change-adverse group downplaying the legitimacy of newer tools.
