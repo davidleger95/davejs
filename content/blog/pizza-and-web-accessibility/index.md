@@ -1,12 +1,17 @@
 ---
 title: How Pizza Is Influencing the Future of Web Accessibility
-date: "2019-10-15T22:12:03.284Z"
-description: "Accessibility is an often overlooked part of the user experience. A recent court ruling involving Domino's Pizza is setting legal precedence for requiring businesses to follow web accessibility guidelines."
+date: 2019-10-15T22:12:03.284Z
+description: Accessibility is an often overlooked part of the user experience. A recent
+  court ruling involving Domino's Pizza is setting legal precedence for requiring
+  businesses to follow web accessibility guidelines.
 tags:
-  - accessibility
-  - opinion
----
+- accessibility
+- opinion
+heroImage:
+  img: "/Pizza.png"
+  alt: 'Browser window showing Dominos website overlaid with the phrase: Cheese Justice!'
 
+---
 Everyone loves pizza, but do we all have equal access to pizza? As the pizza-ordering process has moved from phone calls to websites and apps, the ordering systems we use to get our cheesy goodness have variably left some pizza-lovers behind.
 
 Although web accessibility guidelines have been around for years, still many pizzerias, among other businesses, don’t comply with them. And who can blame them? Meeting accessibility guidelines can be confusing and it’s sometimes difficult to rationalize investing in accessibility when the benefits of doing so are sometimes unclear. But by far the biggest factor is that corporations have not been legally required to make their technology accessible. However, that is changing.
@@ -51,4 +56,3 @@ I think it’s important to note that there are already many products and servic
 - Online retailers like Amazon, Wayfair, and AliExpress
   
 As businesses become increasingly online-only, ensuring that these online stores and services are accessible is becoming increasingly important. While this court ruling with Domino’s is a step in the right direction, I hope to see much more done to ensure all consumers are treated fairly and have equal access to products and services on the web.
-
