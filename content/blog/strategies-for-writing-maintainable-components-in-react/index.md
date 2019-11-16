@@ -1,13 +1,18 @@
 ---
 title: Strategies for Writing Maintainable Components in React
-date: "2019-09-11T22:12:03.284Z"
-description: "How to break React components down into more managable pieces to keep your code clean and readable."
+date: 2019-09-11T22:12:03.284Z
+description: How to break React components down into more managable pieces to keep
+  your code clean and readable.
 tags:
-  - javascript
-  - react
-  - tutorial
----
+- javascript
+- react
+- tutorial
+shareImage: "../assets/react-maintainable-components.jpeg"
+heroImage:
+  img: "../assets/react-maintainable-components.jpeg"
+  alt: The React logo broken into fragments
 
+---
 _Cross-posted from the Manifold blog. [See the original post here.](https://www.manifold.co/blog/strategies-for-writing-maintainable-components-in-react)_
 
 React is a great UI library. Its flexibility makes it a great multitool for building almost any type of UI on the web. But this flexibility comes at the cost of guidance. With more flexibility, it’s much easier to stray away from clean code, and it’s even harder to identify exactly what clean code looks like.
