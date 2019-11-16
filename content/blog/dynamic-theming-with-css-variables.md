@@ -5,11 +5,11 @@ tags:
 - design
 - tutorial
 title: Dynamic Theming with CSS Variables
-description: ''
+description: How I built the Manifold UI theming system.
 heroImage:
   img: "../assets/css variables.jpeg"
   alt: Dark/Light theme toggle
-shareImage: ''
+shareImage: "../assets/css variables.jpeg"
 
 ---
 A common trend on the web these days is dark theming. Twitter, YouTube, Facebook, and many more all have a dark theme option now. It seems every website is adding this capability. In this article, I explore how to create a simple theming system with CSS variables. Let's get started!
