@@ -53,4 +53,5 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
+- content/blog/perspectives-on-failure.md
 - content/blog/pizza-and-web-accessibility/index.md
