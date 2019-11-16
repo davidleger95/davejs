@@ -26,6 +26,12 @@ const StyledDate = styled.small`
   opacity: 0.75;
 `
 
+const Content = styled.div`
+  img {
+    max-width: 100%;
+  }
+`
+
 const BottomNav = styled.nav`
   display: grid;
   grid-auto-flow: column;
@@ -93,7 +99,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </TagList>
           )}
         </Header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <footer>
           <Bio />
