@@ -129,7 +129,7 @@ const HomePage = ({ data, location }) => {
           {projects.slice(0, 3).map(({ title, url, image }) => (
             <li key={url}>
               <Project href={url}>
-                <img src={image.publicURL} alt="" />
+                <img src={image.publicURL} alt="" loading="lazy" />
                 <h3>{title}</h3>
               </Project>
             </li>
