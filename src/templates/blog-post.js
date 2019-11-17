@@ -73,31 +73,28 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        meta={
-          post.tags && [
-            {
-              property: "keywords",
-              content: post.tags.join(","),
-            },
-            {
-              property: "og:image",
-              content: post.frontmatter.shareImage.fixed.src,
-            },
-            {
-              property: "og:url",
-              content: location.href,
-            },
-            {
-              property: "twitter:image",
-              content:
-                (post.frontmatter.shareImage &&
-                  post.frontmatter.shareImage.fixed.src) ||
-                (post.frontmatter.heroImage &&
-                  post.frontmatter.heroImage.img.fixed.src) ||
-                "",
-            },
-          ]
-        }
+        meta={[
+          ...(post.tags
+            ? [
+                {
+                  property: "keywords",
+                  content: post.tags.join(","),
+                },
+              ]
+            : []),
+          {
+            property: "og:image",
+            content: post.frontmatter.shareImage.src.fixed.src,
+          },
+          {
+            property: "og:url",
+            content: location.href,
+          },
+          {
+            property: "twitter:image",
+            content: post.frontmatter.shareImage.src.fixed.src,
+          },
+        ]}
       />
       <article>
         <Header>
