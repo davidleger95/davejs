@@ -67,8 +67,9 @@ const HomePage = ({ data, location }) => {
         <h2>A Bit About Me</h2>
         <p>
           Hey! My name is David Leger and I'm a web developer living in Halifax,
-          Nova Scotia. I go by dave.js because I love writing JavaScript! I love
-          combining creativity with technical skills to design and build awesome
+          Nova Scotia. I go by dave.js because I love writing JavaScript (and
+          there are three other people with my name at work)! I love combining
+          creativity with technical skills to design and build awesome
           experiences on the web.
         </p>
         <p>
