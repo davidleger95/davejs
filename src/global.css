@@ -119,6 +119,10 @@ blockquote p {
   opacity: 0.8;
 }
 
+img {
+  border-radius: 0.5rem;
+}
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
