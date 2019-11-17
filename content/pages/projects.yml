@@ -1,6 +1,16 @@
 ---
 title: projects
 projects:
+- title: Manifold Taco Truck
+  description: We love tacos at Manifold! So I created a 3D CSS animation of our taco
+    truck with our CTO, James, inside. Hover over the door to see him come out!
+  url: https://codepen.io/davidleger95/full/QPKGNZ
+  tags:
+  - css
+  - art
+  - animation
+  - design
+  image: "../assets/taco-truck.gif"
 - title: Music I Listen To
   description: A collection of twelve albums that I throughly enjoy.
   url: https://music.davidleger.me
