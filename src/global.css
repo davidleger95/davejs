@@ -102,9 +102,7 @@ hr::after {
   left: 2rem;
 }
 
-p,
-ul,
-li {
+p {
   line-height: 1.5;
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }

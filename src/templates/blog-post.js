@@ -27,6 +27,13 @@ const StyledDate = styled.small`
 `
 
 const Content = styled.div`
+  p,
+  ul,
+  li {
+    line-height: 1.5;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+
   img {
     max-width: 100%;
   }

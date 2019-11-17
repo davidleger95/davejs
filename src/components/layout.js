@@ -85,7 +85,8 @@ const Layout = ({ location, title, children }) => {
       <Header>
         <Nav>
           {header}
-          <Link to="/">about me</Link>
+          <Link to="/">home</Link>
+          <Link to="/projects">projects</Link>
           <Link to="/blog">blog</Link>
         </Nav>
       </Header>
