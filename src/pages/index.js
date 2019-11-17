@@ -69,8 +69,10 @@ const ProjectList = styled.ul`
   }
 `
 
-const Project = styled.a`
-  /* background-color: #9993; */
+const Project = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer",
+})`
   display: grid;
   grid-gap: 0.5rem;
   text-decoration: none;
