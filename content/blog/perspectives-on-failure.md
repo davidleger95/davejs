@@ -17,9 +17,9 @@ In a work environment like a startup, it’s common for failures to compound and
 
 This has led me to realize that my own strategy for reconciling failure is not all that common. So I’d like to share my perspective on failure and maybe it’ll be helpful to you.
 
-### Everything is an Experiment
+## Everything is an Experiment
 
-![](../assets/failure-experiment.png)
+![Lab beaker](../assets/failure-experiment.png)
 
 I’m not entirely sure where I picked this up, but maintaining this perspective has guided me through many tough failures. To get myself in this mindset, I tell myself:
 
@@ -27,9 +27,9 @@ I’m not entirely sure where I picked this up, but maintaining this perspective
 
 At first, this might feel discouraging. Why bother doing something that we’re expecting not to work? What I’ve found though is that this helps to frame solving problems as a series of disposable experiments. At this point maybe you’re wondering _why ten?_ The number is actually arbitrary, but it’s a number that’s large enough so, by the time I get to it, I no longer care how many attempts I’ve made. Pick 50, or 100, if that’s a better number for you.
 
-### Output vs. Process
+## Output vs. Process
 
-![](../assets/failure-process.png)
+![Process flow](../assets/failure-process.png)
 
 When everything is an experiment, what I’ve noticed is that it prevents any emotional attachment to the output of my work. If months of my work turns out to be useless, it doesn’t bother me because I’ve already decided it’s disposable. But as someone who is passionate about the work I do, my emotions are what motivate me. So how does that work?
 
@@ -37,9 +37,9 @@ When everything is an experiment, what I’ve noticed is that it prevents any em
 
 Shifting focus from the output to the process of running experiments has allowed me to stay passionate about my work, while not exposing myself to the negativity of failure. Become passionate about the process — not your output. Let the tangible results of your work be a byproduct of the process.
 
-### Learning Opportunities
+## Learning Opportunities
 
-![](../assets/failure-learning.png)
+![lightbulb](../assets/failure-learning.png)
 
 We’re all familiar with the concept of learning from our failures. It’s something we’re told from an early age. For me, this feels like a coping mechanism for our biggest fuck-ups. We tell our selves _this is a learning opportunity_ and move on, often without feeling like we’ve learned anything. It seems healthy to approach failure with positivity. But I think we wrongly assume that there is some epiphany to be realized every time we fail, if only we just searched hard enough. In reality, sometimes failures are just wasted time, effort, money, what-have-you; and with little to of value to gain from it and our resilience to failure — ironically — fails.
 
