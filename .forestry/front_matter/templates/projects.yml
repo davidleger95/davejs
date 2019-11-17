@@ -43,3 +43,4 @@ fields:
   config:
     required: false
   label: Title
+  hidden: true
