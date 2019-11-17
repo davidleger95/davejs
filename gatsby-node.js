@@ -19,6 +19,23 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                description
+                heroImage {
+                  img {
+                    src: childImageSharp {
+                      fluid(maxWidth: 640) {
+                        base64
+                        aspectRatio
+                        src
+                        srcSet
+                        srcWebp
+                        srcSetWebp
+                        sizes
+                      }
+                    }
+                  }
+                  alt
+                }
               }
             }
           }

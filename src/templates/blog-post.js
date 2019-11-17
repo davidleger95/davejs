@@ -30,8 +30,16 @@ const Content = styled.div`
   p,
   ul,
   li {
-    line-height: 1.5;
+    line-height: 1.75;
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+  }
+
+  blockquote p {
+    font-size: 1.4em;
+    font-family: inherit;
+    font-style: italic;
+    color: var(--primary-color);
   }
 
   img {
@@ -61,12 +69,31 @@ const Content = styled.div`
 
 const BottomNav = styled.nav`
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
   margin-top: 2.5rem;
+`
 
-  & [rel="next"] {
-    text-align: right;
+const NavLink = styled(Link)`
+  display: grid;
+  grid-template-rows: 8rem auto;
+  grid-gap: 1rem;
+  text-decoration: none;
+  transition: transform 100ms ease-in-out;
+  align-content: start;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    align-self: start;
+    font-size: 0.9em;
+  }
+
+  &:hover {
+    transform: scale(1.025);
   }
 `
 
@@ -131,17 +158,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Bio />
         </footer>
       </article>
+      <h3>More Posts</h3>
       {(previous || next) && (
         <BottomNav>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              &lt;= {previous.frontmatter.title}
-            </Link>
+            <NavLink to={previous.fields.slug} rel="prev">
+              <Image fluid={previous.frontmatter.heroImage.img.src.fluid} />
+              <h4>{previous.frontmatter.title}</h4>
+              <p>{previous.frontmatter.description}</p>
+            </NavLink>
           )}
           {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} =&gt;
-            </Link>
+            <NavLink to={next.fields.slug} rel="next">
+              <Image fluid={next.frontmatter.heroImage.img.src.fluid} />
+              <h4>{next.frontmatter.title}</h4>
+              <p>{next.frontmatter.description}</p>
+            </NavLink>
           )}
         </BottomNav>
       )}

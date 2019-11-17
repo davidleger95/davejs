@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import accent from "../components/davejs-lead-accent.png"
+import LinkButton from "../components/styled/LinkButton"
 
 const Container = styled.main`
   margin: 15vh 0;
@@ -52,9 +53,47 @@ const Section = styled.section`
   margin: 15vh 0;
 `
 
+const ProjectList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1.5rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 8rem;
+  }
+`
+
+const Project = styled.a`
+  /* background-color: #9993; */
+  display: grid;
+  grid-gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 100ms ease-in-out;
+
+  h3 {
+    margin: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`
+
+const BigLink = styled(LinkButton)`
+  width: 20em;
+  max-width: 100%;
+  margin: 2rem auto;
+`
+
 const HomePage = ({ data, location }) => {
-  // const siteTitle = data.site.siteMetadata.title
   const { lead } = data.home
+  const { projects } = data.projects
 
   return (
     <Layout location={location}>
@@ -85,22 +124,18 @@ const HomePage = ({ data, location }) => {
         </p>
       </Section>
       <Section>
-        <h2>Projects</h2>
-        <p>
-          Sorry, I'm lazy. I haven't moved my projects over from my old website
-          yet.
-        </p>
-        <p>
-          Check out{" "}
-          <a
-            href="https://davidleger.me"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            my old website
-          </a>{" "}
-          for links to my projects.
-        </p>
+        <h2>Recent Projects</h2>
+        <ProjectList>
+          {projects.slice(0, 3).map(({ title, url, image }) => (
+            <li key={url}>
+              <Project href={url}>
+                <img src={image.publicURL} alt="" />
+                <h3>{title}</h3>
+              </Project>
+            </li>
+          ))}
+        </ProjectList>
+        <BigLink to="/projects">All Projects</BigLink>
       </Section>
       <Section>
         <h2>Get in Touch</h2>
@@ -143,6 +178,15 @@ export const pageQuery = graphql`
       lead
       image {
         alt
+      }
+    }
+    projects: pagesYaml(title: { eq: "projects" }) {
+      projects {
+        title
+        url
+        image {
+          publicURL
+        }
       }
     }
   }

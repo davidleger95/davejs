@@ -26,7 +26,7 @@ const Project = styled.li`
   @media (min-width: 550px) {
     justify-items: start;
     grid-gap: 0.5rem 2rem;
-    grid-template-columns: 15rem 1fr;
+    grid-template-columns: 16rem 1fr;
     grid-template-rows: repeat(auto-fill, auto);
   }
 `
@@ -64,7 +64,7 @@ const ImageContainer = styled.div`
   height: 50vw;
 
   @media (min-width: 550px) {
-    height: 8rem;
+    height: 9rem;
   }
 `
 const Thumbnail = styled.img`
