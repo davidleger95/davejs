@@ -84,15 +84,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             : []),
           {
             property: "og:image",
-            content: post.frontmatter.shareImage.src.fixed.src,
+            content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
           },
           {
             property: "og:url",
-            content: location.href,
+            content: `https://davejs.dev${post.fields.slug}`,
           },
           {
             property: "twitter:image",
-            content: post.frontmatter.shareImage.src.fixed.src,
+            content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
           },
         ]}
       />
@@ -156,6 +156,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       timeToRead
       frontmatter {
         title
