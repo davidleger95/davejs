@@ -9,6 +9,15 @@ projects:
   - animation
   image: "../assets/ferry.gif"
   description: CSS animation of the Dartmouth Ferry.
+- title: Jellyfish
+  description: A CSS jellyfish animation.
+  url: https://codepen.io/davidleger95/full/MREodB
+  tags:
+  - css
+  - art
+  - animation
+  - design
+  image: "../assets/jelly.gif"
 - title: Manifold Taco Truck
   description: We love tacos at Manifold! So I created a 3D CSS animation of our taco
     truck with our CTO, James, inside. Hover over the door to see him come out!
