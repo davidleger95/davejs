@@ -44,3 +44,5 @@ fields:
     required: false
   label: Title
   hidden: true
+pages:
+- content/pages/projects.yml

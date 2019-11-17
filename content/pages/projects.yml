@@ -1,1 +1,11 @@
+---
 title: projects
+projects:
+- title: Dartmouth Ferry
+  url: https://ferry.davejs.dev/
+  tags:
+  - css
+  - art
+  - animation
+  image: "../assets/ferry.gif"
+  description: CSS animation of the Dartmouth Ferry.
