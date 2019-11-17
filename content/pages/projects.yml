@@ -1,6 +1,14 @@
 ---
 title: projects
 projects:
+- title: Dartmouth Ferry
+  url: https://ferry.davejs.dev/
+  tags:
+  - css
+  - art
+  - animation
+  image: "../assets/ferry.gif"
+  description: CSS animation of the Dartmouth Ferry.
 - title: Manifold Taco Truck
   description: We love tacos at Manifold! So I created a 3D CSS animation of our taco
     truck with our CTO, James, inside. Hover over the door to see him come out!
@@ -20,11 +28,11 @@ projects:
   - music
   - design
   image: "../assets/music.gif"
-- title: Dartmouth Ferry
-  url: https://ferry.davejs.dev/
+- title: New Age Creators Website
+  url: http://davidleger95.github.io/nac-website/
   tags:
+  - design
   - css
-  - art
-  - animation
-  image: "../assets/ferry.gif"
-  description: CSS animation of the Dartmouth Ferry.
+  image: "../assets/nac.gif"
+  description: A website I built for the YouTube channel New Age Creators, an international
+    collaboration channel made up of five young and talented creators.
