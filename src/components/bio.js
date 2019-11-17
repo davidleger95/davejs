@@ -49,12 +49,34 @@ const Bio = () => {
     <Container>
       <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
       <p>
-        Written by <strong>{author}</strong> who lives and works in Halifax
-        building useful things.
+        Written by <strong>{author}</strong>. I’m an artsy software engineer
+        living in Halifax. I work at Manifold where I build API marketplaces.
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        Follow me on:{" "}
+        <a
+          href={`https://twitter.com/${social.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Twitter
         </a>
+        ,{" "}
+        <a
+          href={`https://medium.com/@${social.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Medium
+        </a>
+        ,{" "}
+        <a
+          href={`https://instagram.com/${social.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        .
       </p>
     </Container>
   )

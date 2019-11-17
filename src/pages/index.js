@@ -64,7 +64,7 @@ const HomePage = ({ data, location }) => {
         <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
       </Container>
       <Section>
-        <h2>a bit about me</h2>
+        <h2>A Bit About Me</h2>
         <p>
           Hey! My name is David Leger and I'm a web developer living in Halifax,
           Nova Scotia. I go by dave.js because I love writing JavaScript! I love
@@ -81,6 +81,39 @@ const HomePage = ({ data, location }) => {
             Manifold
           </a>{" "}
           building marketplaces for cloud services and APIs.
+        </p>
+      </Section>
+      <Section>
+        <h2>Projects</h2>
+        <p>
+          Sorry, I'm lazy. I haven't moved my projects over from my old website
+          yet.
+        </p>
+        <p>
+          Check out{" "}
+          <a
+            href="https://davidleger.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            my old website
+          </a>{" "}
+          for links to my projects.
+        </p>
+      </Section>
+      <Section>
+        <h2>Get in Touch</h2>
+        <p></p>
+        <p>
+          <a href="mailto:davidleger95@me.com">Send me an email</a>, or{" "}
+          <a
+            href="https://twitter.com/_davejs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            say hi on Twitter
+          </a>{" "}
+          if you'd like to chat!
         </p>
       </Section>
     </Layout>
