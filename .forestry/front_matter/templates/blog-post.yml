@@ -53,6 +53,7 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
+- content/blog/components-in-framer-x.md
 - content/blog/why-the-box-model-is-integral-to-web-design.md
 - content/blog/dynamic-theming-with-css-variables.md
 - content/blog/embracing-webflow-as-a-frontend-developer.md
