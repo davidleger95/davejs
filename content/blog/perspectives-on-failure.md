@@ -6,9 +6,9 @@ tags:
 title: Perspective on Failure
 description: How I cope with constant failure while working at a startup.
 heroImage:
-  img: "../assets/failure-hero.png"
-  alt: Cancel symbol
-shareImage: "../assets/failure-share-image-1.png"
+  img: "../assets/failure-hero-1.png"
+  alt: The letter F, circled
+shareImage: "../assets/failure-share-image-2.png"
 
 ---
 Working for a startup, I see myself and my coworkers experience failure almost on a daily basis. Sometimes these failures are hard to reconcile. For instance, entirely scrapping a project that people put months of work into just days after launch. Failures like this are not small and they happen often enough that before we can even process one failure, another one is likely sneaking up behind us.
