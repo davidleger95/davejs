@@ -7,6 +7,7 @@ description: Accessibility is an often overlooked part of the user experience. A
 tags:
 - accessibility
 - opinion
+- law
 heroImage:
   img: "../assets/Pizza.png"
   alt: 'Browser window showing Dominos website overlaid with the phrase: Cheese Justice!'
