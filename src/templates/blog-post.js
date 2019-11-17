@@ -106,7 +106,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               />
             </HeroImage>
           )}
-          <StyledDate>{post.frontmatter.date}</StyledDate>
+          <StyledDate>
+            {post.frontmatter.date} &bull; {post.timeToRead} min.
+          </StyledDate>
           <Title>{post.frontmatter.title}</Title>
           {post.frontmatter.tags && (
             <TagList>
@@ -154,6 +156,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
