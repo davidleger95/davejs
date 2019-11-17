@@ -25,7 +25,13 @@ I’m not entirely sure where I picked this up, but maintaining this perspective
 
 > The first ten times you do something, expect to fail.
 
-At first, this might feel discouraging. Why bother doing something that we’re expecting not to work? What I’ve noticed though is this frames solving problems as a series of disposable experiments. At this point maybe you’re wondering _why ten?_ The number is actually arbitrary, but it’s a number that’s large enough so, by the time I get to it, I no longer care how many attempts I’ve made. Pick 50, or 100, if that’s a better number for you.
+At first, this might feel discouraging. Why bother doing something that we’re expecting not to work? What I’ve noticed though is this frames solving problems as a series of disposable experiments. At this point maybe you’re wondering _why ten?_ The number is actually arbitrary, but it’s a number that’s large enough so, by the time I get to it, I no longer care how many attempts I’ve made. Pick 50, or 100, if that’s a better number for you. 
+
+What's important to keep in perspective is that success (though it may happen early on) is not expected on the first, second, or even tenth try. Everything is just an experiement, rather than your _one shot, your one opportunity, to seize everything you ever wanted... His palms are swea_—
+
+Anyway, let's get back to it.
+
+### **Output vs. Process** 
 
 ![Process flow](../assets/failure-process.png)
 
