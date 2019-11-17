@@ -9,6 +9,10 @@ sections:
   label: Blog
   create: all
   match: "**/*"
+- type: document
+  path: content/pages/projects.yml
+  label: Projects
+  match: "**/*"
 - type: heading
   label: Pages
 - type: document
