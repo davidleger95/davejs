@@ -36,3 +36,12 @@ projects:
   image: "../assets/nac.gif"
   description: A website I built for the YouTube channel New Age Creators, an international
     collaboration channel made up of five young and talented creators.
+- title: Donald Knuth Biography Website
+  description: "A biography website about Donald Knuth.\n\n"
+  url: http://davidleger95.github.io/knuth-biography/#early-works
+  tags:
+  - design
+  - html
+  - css
+  - jquery
+  image: "../assets/knuth.gif"
