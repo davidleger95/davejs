@@ -14,13 +14,21 @@ const ProjectList = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
+  display: grid;
+  grid-gap: 4rem;
 `
 
 const Project = styled.li`
   display: grid;
-  grid-template-columns: 15rem 1fr;
-  grid-template-rows: repeat(auto-fill, auto);
-  grid-gap: 0.5rem 1rem;
+  grid-gap: 1rem;
+  align-items: start;
+
+  @media (min-width: 550px) {
+    justify-items: start;
+    grid-gap: 0.5rem 2rem;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: repeat(auto-fill, auto);
+  }
 `
 
 const Title = styled.h2`
@@ -30,10 +38,39 @@ const Title = styled.h2`
 const Description = styled.p`
   margin: 0;
 `
-const CTA = styled.a.attrs({ rel: "noopener noreferrer", target: "_blank" })``
-const Thumbnail = styled.img`
-  width: 100%;
+const CTA = styled.a.attrs({ rel: "noopener noreferrer", target: "_blank" })`
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  transition: transform 100ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+`
+
+const ImageContainer = styled.div`
+  align-self: start;
+  border-radius: 0.5rem;
   grid-row: 1 / span 4;
+  height: 50vw;
+
+  @media (min-width: 550px) {
+    height: 8rem;
+  }
+`
+const Thumbnail = styled.img`
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 `
 
 const HomePage = ({ data, location }) => {
@@ -48,7 +85,9 @@ const HomePage = ({ data, location }) => {
         <ProjectList>
           {projects.map(({ title, description, url, tags, image }) => (
             <Project key={url}>
-              <Thumbnail src={image.publicURL} />
+              <ImageContainer>
+                <Thumbnail src={image.publicURL} />
+              </ImageContainer>
               <Title>{title}</Title>
               <Description>{description}</Description>
               <TagList>
