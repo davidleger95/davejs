@@ -30,6 +30,26 @@ const Content = styled.div`
   img {
     max-width: 100%;
   }
+
+  table {
+    border-collapse: collapse;
+    min-width: 100%;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+  }
+
+  th {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+
+  td {
+    border: 1px solid #8888;
+    font-family: Roboto, sans-serif;
+  }
 `
 
 const BottomNav = styled.nav`

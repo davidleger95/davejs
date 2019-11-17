@@ -1,19 +1,20 @@
 ---
 date: 2019-10-08T22:44:57Z
 tags:
-- framer
-- css
-- design
-- tutorial
+  - framer
+  - css
+  - design
+  - tutorial
 title: Why the Box Model is Integral to Web Design
-description: Understanding the technical basics of web will make design and handoff
+description:
+  Understanding the technical basics of web will make design and handoff
   considerably smoother.
 heroImage:
   img: "../assets/box-model.jpg"
   alt: Box model
 shareImage: "../assets/box-model.jpg"
-
 ---
+
 Consider the building you’re sitting in. Someone—likely an architect—spent just as much time thinking about its design as they did about its structural integrity. Now theoretically, web designers ought to operate along this same line of logic. But since the web is a comparatively more forgiving medium, designers can make changes to a website without worrying if it will all collapse into rubble. This enables us to design for the web without being fully aware of all of its constraints and limitations. And although it’s not critical for a design to be perfect on the first attempt (ship first, then iterate, right?), there are still costs associated with reworking a website. Often, those result in projects being behind schedule and over budget.
 
 Understanding the basics of web as a medium can help guide us from an idea to a finished website faster—and with fewer mistakes. When we’re familiar with the technical details of how the browser renders elements on a page, we can make more informed decisions earlier in the design process. Knowing what’s possible (or impossible) and which way is easier and faster to implement can significantly reduce time spent reworking and make developer handoffs happen more smoothly.
@@ -54,39 +55,38 @@ Percentage units can be used to create flexible elements based on the size of th
 }
 ```
 
-
 ## Padding and margin
 
 Padding and margin are the most easily confused parts of the box model. Here’s a simplified comparison between the two:
 
-|  | Padding Box |
-| --- | --- |
-| Positioning | Outside the content box |
+|                     | Padding Box                        |
+| ------------------- | :--------------------------------- |
+| Positioning         | Outside the content box            |
 | Background Behavior | Shares background with content box |
-| Layout Behavior | Doesn’t overlap |
+| Layout Behavior     | Doesn’t overlap                    |
 
 In CSS, padding can be defined using the `**padding**` property. Margin is similarly defined using the `**margin**` property.
 
 Here’s an example of how to use them in CSS:
 
-```css
+````css
 .box-1 {
   /* Adds a 1rem to all sides. */
   padding: 1rem;
   margin: 1rem;
-}    
+}
 
-.box-2 {  
-  /* Adds a 1rem to the top and bottom, and 0.5rem to the left and right. */  
+.box-2 {
+  /* Adds a 1rem to the top and bottom, and 0.5rem to the left and right. */
   padding: 1rem 0.5rem;
   margin: 1rem 0.5rem;
-}  
+}
 .box-3 {
   /* Adds a 1rem to the top and 0.75rem to the right, 0.5rem to the bottom,
    * and 0.25rem to the left. The order is counter-clockwise, starting with the
    * top and ending with the left side.
-   */  
-  padding: 1rem 0.75rem 0.5rem 0.25rem;  
+   */
+  padding: 1rem 0.75rem 0.5rem 0.25rem;
   margin: 1rem 0.75rem 0.5rem 0.25rem;
 }
 
@@ -105,7 +105,7 @@ Here’s `**.box-3**` from the previous example refactored to use side-specific 
   margin-bottom: 0.5rem;
   margin-left: 0.25rem;
 }
-```
+````
 
 ## Border
 
@@ -133,7 +133,7 @@ In the section on content, we learned that the content box is defined using `**w
 
 We can use these formulas to get an element’s total size:
 
-```    
+```
 totalWidth = width + (padding-left + padding-right) + (border-left-width + border-right-width)  totalHeight = height + (padding-top + padding-bottom) + (border-top-width + border-bottom-width)
 ```
 
@@ -143,7 +143,8 @@ And we can apply a refactored version of this formula in CSS using `**calc()**` 
 .box {
   /* contentWith = totalWidth - 2 * padding - 2 * border-width */
   width: calc(300px - 2 * 10px - 2 * 2px);
-  padding: 0 10px;  border: 2px solid blue;
+  padding: 0 10px;
+  border: 2px solid blue;
 }
 ```
 
@@ -151,7 +152,7 @@ This can be frustrating, especially if we need to adjust the padding on an eleme
 
 ```css
 .box {
-  box-sizing: border-box;  
+  box-sizing: border-box;
   width: 300px;
   padding: 10px;
   border: 2px solid blue;
@@ -161,10 +162,12 @@ This can be frustrating, especially if we need to adjust the padding on an eleme
 It is often the case that `**border-box**` is the preferred box sizing. Instead of setting `**box-sizing: border-box**` individually on each element, these CSS rules will set box sizing for all elements:
 
 ```css
-:root { 
+:root {
   box-sizing: border-box;
-} *, 
-*::before, *::after {
+}
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```
