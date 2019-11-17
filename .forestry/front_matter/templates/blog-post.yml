@@ -54,7 +54,7 @@ fields:
   description: 'For Social Media '
 pages:
 - content/blog/perspectives-on-failure.md
-- content/blog/dynamic-theming-with-css-variables.md
-- content/blog/components-in-framer-x.md
 - content/blog/why-the-box-model-is-integral-to-web-design.md
+- content/blog/components-in-framer-x.md
+- content/blog/dynamic-theming-with-css-variables.md
 - content/blog/embracing-webflow-as-a-frontend-developer.md
