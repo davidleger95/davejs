@@ -5,7 +5,8 @@ tags:
 - design
 - js
 - react
-title: Components in Framer X
+- tutorial
+title: Creating Interactive Code Components in Framer X
 description: Learn how to create interactive components with React and use them to
   build better prototypes.
 heroImage:
