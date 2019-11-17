@@ -38,7 +38,7 @@ projects:
     collaboration channel made up of five young and talented creators.
 - title: Donald Knuth Biography Website
   description: "A biography website about Donald Knuth.\n\n"
-  url: http://davidleger95.github.io/knuth-biography/#early-works
+  url: http://davidleger95.github.io/knuth-biography/
   tags:
   - design
   - html
