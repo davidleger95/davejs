@@ -1,6 +1,10 @@
 ---
 date: 2019-08-07T22:54:21Z
-tags: []
+tags:
+- framer
+- design
+- js
+- react
 title: Components in Framer X
 description: Learn how to create interactive components with React and use them to
   build better prototypes.
