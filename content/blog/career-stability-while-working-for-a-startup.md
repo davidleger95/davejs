@@ -5,7 +5,7 @@ tags:
 - opinion
 - startups
 - manifold
-title: Job Stability in Startupland
+title: Job Security in Startup-land
 description: Why working for a startup is not be as risky as it might seem.
 heroImage:
   img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
