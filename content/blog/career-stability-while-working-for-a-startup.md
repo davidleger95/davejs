@@ -8,8 +8,8 @@ tags:
 title: Job Security in Startup-land
 description: Why working for a startup is not be as risky as it might seem.
 heroImage:
-  img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
-  alt: Password field
+  img: ''
+  alt: ''
 shareImage: "../assets/job-security.png"
 
 ---
