@@ -8,8 +8,8 @@ tags:
 title: Job Security in Startup-land
 description: Why working for a startup is not be as risky as it might seem.
 heroImage:
-  img: ''
-  alt: ''
+  img: "../assets/manifold-office.jpg"
+  alt: The Manifold office
 shareImage: "../assets/job-security.png"
 
 ---
