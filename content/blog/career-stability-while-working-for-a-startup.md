@@ -10,7 +10,7 @@ description: Why working for a startup is not be as risky as it might seem.
 heroImage:
   img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
   alt: Password field
-shareImage: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
+shareImage: "../assets/job-security.png"
 
 ---
 When I started my job at [Manifold](https://manifold.co), my parents warned me about taking a potentially unstable job. Leaving a stable job at [Cvent](https://cvent.com) to go work for a Series A startup seemed like a big risk.
