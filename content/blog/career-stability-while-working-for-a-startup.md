@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 date: 2019-11-17T22:54:21.000+00:00
 tags:
 - opinion
