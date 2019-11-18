@@ -1,18 +1,20 @@
 ---
+draft: false
 date: 2018-05-28T21:06:17.000+00:00
 tags:
-- opinion
-- webflow
+  - opinion
+  - webflow
 title: Embracing Webflow as a Frontend Developer
-description: Development doesn't always have to be done with code. Tools like Webflow
+description:
+  Development doesn't always have to be done with code. Tools like Webflow
   are making it easier to build websites while staying true to core concepts of the
   web.
 heroImage:
   img: "../assets/webflow.png"
   alt: Embracing Webflow as a Frontend Developer
 shareImage: "../assets/webflow.png"
-
 ---
+
 Throughout the rather short history of software development, there have been many evolutions in the tools we use to build software. Despite the very nature of software development being rapid change, there’s always been a resistant, change-adverse group downplaying the legitimacy of newer tools.
 
 When we advanced from Assembly to the familiar C-like languages commonly used today, there were no doubt programmers who scoffed at C and thought the abstractions went too far — that _real_ programmers wrote Assembly, and C was just a toy for the simpletons. We often hear, more recently, the same sentiments expressed towards languages like PHP and Visual Basic. In an interview once, I saw my chances of getting the job disappear in a swift evanescence when I mentioned to my interviewer that my last job was primarily working with PHP.

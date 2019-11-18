@@ -1,4 +1,5 @@
 ---
+draft: false
 title: The Literary Medium of Source Code
 date: 2015-11-16T22:12:03.284+00:00
 description: Is code a form of literature? Is it art? Let's discuss.
@@ -7,10 +8,10 @@ heroImage:
   alt: ink pen with markup braces around it
 shareImage: "../assets/code-literature.png"
 tags:
-- programming
-- opinion
-
+  - programming
+  - opinion
 ---
+
 In modern society, there are many forms of new media ranging from blog posts to text messages, to tweets — the list goes on. Although it is up for debate which of these forms may exist as literature (Armistead, 2014), beneath many of these new mediums, wrought by the advancement of technology, exists an unseen literary landscape as a common thread in all of them: source code. Source code is a broad term meaning “a text listing of commands to be compiled or assembled into an executable computer program.” (“Source code”). The primary purpose of source code is to provide a means for humans to give detailed, complex instructions to a computer. In our society, source code plays a major role in most of our daily lives. People interact with source code, whether there are aware of it or not, on a daily basis through the use of any electronic device. In a society impacted by such prominent cultural shift towards technology — and by extension, a reliance on source code — the effects of this new form of expression must be considered by the artistic community as a form of artistic expression itself in order to adequately represent technology’s impact on social change.
 
 Through a comparison of source code with other forms of traditional artistic expression (art forms which are already established in their own right) and analyzing the social context in which source code exists, conclusions can be drawn about the state of source code as a legitimate medium for artistic expression in a digital society. In this analysis, there are several factors to be considered: relevance of the form to the society in which it exists, the ability for people of the society to understand and interpret the form, and how the form delineates from, and relates to, those forms already established in the society.
@@ -53,7 +54,7 @@ Source code is a diverse literary medium offering unique forms of expression whi
 
 Nonetheless, in the context of our current social landscape, source code is not literature. Still despite that, the scope of literary study is only constricted by the society which defines it (Hirsch, 1978). With a worldwide progression towards digital societies, new works that utilize source code as a medium are increasingly likely to become the subject of literary study. As a result of this, the definition of literature has the potential to change with society to include works in source code as canon in the field of literature.
 
-***
+---
 
 ## References
 
@@ -67,7 +68,7 @@ Hirsch, E.D. (1978). What Isn’t Literature? In P. Hernadi (Ed.), _What is Lite
 
 In Advance of the Broken Arm. (n.d.). Retrieved June 22, 2015, from: http://www.toutfait.com/unmaking_the_museum/Shovel.html
 
-Kera, D. (2010). From data realism to dada aggregations: visualizations in digital art, humanities and popular culture. National University of Singapore. Retrieved from http://www.academia.edu/2397351/From_Data_Realism_to_Dada_Aggregations _Visualizations_in_Digital_Art_Humanities_and_Popular_Culture
+Kera, D. (2010). From data realism to dada aggregations: visualizations in digital art, humanities and popular culture. National University of Singapore. Retrieved from http://www.academia.edu/2397351/From_Data_Realism_to_Dada_Aggregations \_Visualizations_in_Digital_Art_Humanities_and_Popular_Culture
 
 Kernighan, B. (1974). Programming in C: A Tutorial. Murray Hill: Bell Laboratories.
 
@@ -82,7 +83,7 @@ Source code \[Def. 1\]. (n.d.). Oxford Dictionaries. In Oxford Dictionaries. Ret
 The job/student gap in computer science. Code.org. Retrieved June 18, 2015, from: https://code.org/promote
 Wall, L. (1990). Black Perl. Usenet.
 
-***
+---
 
 ### Appendix A: “Black Perl” by Larry Wall
 
@@ -115,7 +116,7 @@ AFTERWORDS: tell nobody.
 # Larry Wall
 ```
 
-***
+---
 
 ### Appendix B: “HelloWorld” in Various Languages
 

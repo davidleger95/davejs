@@ -1,19 +1,21 @@
 ---
+draft: false
 title: How Pizza Is Shaping Web Accessibility Laws
 date: 2019-10-15T22:12:03.284+00:00
-description: Accessibility is an often overlooked part of the user experience. A recent
+description:
+  Accessibility is an often overlooked part of the user experience. A recent
   court ruling involving Domino's Pizza is setting legal precedence for requiring
   businesses to follow web accessibility guidelines.
 tags:
-- accessibility
-- opinion
-- law
+  - accessibility
+  - opinion
+  - law
 heroImage:
   img: "../assets/Pizza.png"
-  alt: 'Browser window showing Dominos website overlaid with the phrase: Cheese Justice!'
+  alt: "Browser window showing Dominos website overlaid with the phrase: Cheese Justice!"
 shareImage: "../assets/Pizza.png"
-
 ---
+
 Everyone loves pizza, but do we all have equal access to pizza? As the pizza-ordering process has moved from phone calls to websites and apps, the ordering systems we use to get our cheesy goodness have variably left some pizza-lovers behind.
 
 Although web accessibility guidelines have been around for years, still many pizzerias, among other businesses, don’t comply with them. And who can blame them? Meeting accessibility guidelines can be confusing and it’s sometimes difficult to rationalize investing in accessibility when the benefits of doing so are sometimes unclear. But by far the biggest factor is that corporations have not been legally required to make their technology accessible. However, that is changing.

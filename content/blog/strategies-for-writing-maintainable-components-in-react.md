@@ -1,19 +1,21 @@
 ---
+draft: false
 title: Strategies for Writing Maintainable Components in React
 date: 2019-09-11T22:12:03.284+00:00
-description: How to break React components down into more managable pieces to keep
+description:
+  How to break React components down into more managable pieces to keep
   your code clean and readable.
 tags:
-- javascript
-- react
-- tutorial
-- manifold
+  - javascript
+  - react
+  - tutorial
+  - manifold
 shareImage: "../assets/react-maintainable-components.jpeg"
 heroImage:
   img: "../assets/react-maintainable-components.jpeg"
   alt: The React logo broken into fragments
-
 ---
+
 _Cross-posted from the Manifold blog. [See the original post here.](https://www.manifold.co/blog/strategies-for-writing-maintainable-components-in-react)_
 
 React is a great UI library. Its flexibility makes it a great multitool for building almost any type of UI on the web. But this flexibility comes at the cost of guidance. With more flexibility, it’s much easier to stray away from clean code, and it’s even harder to identify exactly what clean code looks like.
@@ -29,10 +31,10 @@ Using functional components instead of class components reduces the amount of bo
 ### Class component (6 lines)
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react"
 export default class MyComponent extends Component {
   render() {
-    return <h1>Hello!</h1>;
+    return <h1>Hello!</h1>
   }
 }
 ```
@@ -189,6 +191,6 @@ You may want to consider moving a component to its own file when one or more of 
 - The component is being reused elsewhere (exported).
 - The component has several subcomponents.
 
-***
+---
 
 This is just one strategy for writing maintainable React components. I find it works well in many cases, but the strategy that works best for each person, team, or codebase could look very different from this. That flexibility is what makes React so versatile. There are many ways to create the same UI in React — it’s up to us as developers to choose the best approach for the problem at hand.

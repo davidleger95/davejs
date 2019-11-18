@@ -1,19 +1,20 @@
 ---
+draft: false
 date: 2019-08-07T22:54:21Z
 tags:
-- framer
-- design
-- js
-- react
-- tutorial
+  - framer
+  - design
+  - js
+  - react
+  - tutorial
 title: Creating Interactive Code Components in Framer X
-description: Learn how to create interactive components with React and use them to
+description:
+  Learn how to create interactive components with React and use them to
   build better prototypes.
 heroImage:
   img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
   alt: Password field
 shareImage: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
-
 ---
 
 For designers, code can be intimidating—it requires a lot of time and effort to learn. However, learning how to code in React can be a really powerful tool for designers because it allows you to build complex, interactive elements. In this post, we'll be exploring the benefits of highly interactive prototypes and how to build a simple interactive code component with React in Framer X.
@@ -37,10 +38,10 @@ Let’s explore how we can create a code component with React.
 Here's a basic React component:
 
 ```jsx
-import * as React from 'react';
+import * as React from "react"
 // Creates the `Hello` component which displays "Hello World" as a level 1 heading.
 export function Hello() {
-  return <h1>Hello World!</h1>;
+  return <h1>Hello World!</h1>
 }
 ```
 
@@ -51,18 +52,18 @@ import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 // Creates the `Hello` component with a `name` prop.
 export function Hello({ name, color }) {
-   return <h1 style={{ color }}>Hello {name}!</h1>
+  return <h1 style={{ color }}>Hello {name}!</h1>
 }
- 
+
 // Defines the default value for the `name` prop.
 Hello.defaultProps = {
-   name: "World",
+  name: "World",
 }
- 
+
 // Adds a control to override `name` and `color`.
 addPropertyControls(Hello, {
-   name: { type: ControlType.String, title: "Name" },
-   color: { type: ControlType.Color, title: "Color" }
+  name: { type: ControlType.String, title: "Name" },
+  color: { type: ControlType.Color, title: "Color" },
 })
 ```
 
@@ -78,13 +79,13 @@ In this example, you'll make a simple password component with validation. First,
 
 ```jsx
 export function Password() {
- return (
-   <div style={{ display: "grid", gridGap: "0.25rem" }}>
-     <label>Password</label>
-     <input type="password" placeholder="********" />
-     <p style={{ color: "red" }}>Password must be at least 6 characters.</p>
-   </div>
- )
+  return (
+    <div style={{ display: "grid", gridGap: "0.25rem" }}>
+      <label>Password</label>
+      <input type="password" placeholder="********" />
+      <p style={{ color: "red" }}>Password must be at least 6 characters.</p>
+    </div>
+  )
 }
 ```
 
@@ -93,37 +94,46 @@ Now you have a simple password field. Because it includes a standard `**input**`
 Let's add some controls so you can customize your password field.
 
 ```jsx
-export function Password({ label, placeholder, min, errorColor, successColor, gap }) {
- return (
-   <div style={{ display: "grid", gridGap: gap }}>
-     <label>{label}</label>
-     <input type="password" placeholder={placeholder} />
-     <p style={{ color: errorColor }}>Password must be at least 6 characters.</p>
-   </div>
- )
+export function Password({
+  label,
+  placeholder,
+  min,
+  errorColor,
+  successColor,
+  gap,
+}) {
+  return (
+    <div style={{ display: "grid", gridGap: gap }}>
+      <label>{label}</label>
+      <input type="password" placeholder={placeholder} />
+      <p style={{ color: errorColor }}>
+        Password must be at least 6 characters.
+      </p>
+    </div>
+  )
 }
- 
+
 Password.defaultProps = {
- label: "Password",
- placeholder: "Password",
- errorColor: "red",
- successColor: "green",
- gap: "0"
+  label: "Password",
+  placeholder: "Password",
+  errorColor: "red",
+  successColor: "green",
+  gap: "0",
 }
- 
+
 addPropertyControls(Password, {
- // The field label
- label: { type: ControlType.String, title: "Label" },
- // The placeholder value for the input
- placeholder: { type: ControlType.String, title: "Placeholder" },
- // The minimum password length
- min: { type: ControlType.Number, title: "Min. Letters" },
- // The color of the error message
- errorColor: { type: ControlType.Color, title: "Error" },
- // The color of the success message
- successColor: { type: ControlType.Color, title: "Success" },
- // The gap between elements
- gap: { type: ControlType.String, title: "Spacing" }
+  // The field label
+  label: { type: ControlType.String, title: "Label" },
+  // The placeholder value for the input
+  placeholder: { type: ControlType.String, title: "Placeholder" },
+  // The minimum password length
+  min: { type: ControlType.Number, title: "Min. Letters" },
+  // The color of the error message
+  errorColor: { type: ControlType.Color, title: "Error" },
+  // The color of the success message
+  successColor: { type: ControlType.Color, title: "Success" },
+  // The gap between elements
+  gap: { type: ControlType.String, title: "Spacing" },
 })
 ```
 
@@ -134,7 +144,7 @@ Using these props is fairly straightforward for all except `**min**`. Let’s ad
 `**useState**` takes one parameter, which is the default value, and returns the current value and a function to update the current value.
 
 ```jsx
-const [myValue, setMyValue] = React.useState('My Default Value');
+const [myValue, setMyValue] = React.useState("My Default Value")
 ```
 
 To learn more about states, check out the [**official React documentation**](https://reactjs.org/docs/hooks-state.html).
@@ -142,27 +152,38 @@ To learn more about states, check out the [**official React documentation**](htt
 For this password component we'll use two states: one to keep track of the password value as it changes and another to keep track of whether we should show the validations. In this case, we're using `**onBlur**` so that the password will only be validated once the user leaves the field.
 
 ```jsx
-export function Password({ label, placeholder, min, errorColor, successColor, gap }) {
- const [value, setValue] = React.useState("")
- const [showValidations, setShowValidations] = React.useState(false)
- // Checks the length of the password.
- const isTooShort = value.length < min
- return (
-   <div style={{ display: "grid", gridGap: gap }}>
-     <label>{label}</label>
-     <input
-       type="password"
-       placeholder={placeholder}
-       value={value}
-       onChange={e => setValue(e.target.value)}
-       onBlur={() => setShowValidations(true)}
-     />
-     {showValidations &&
-     (isTooShort
-       ? <p style={{ color: errorColor }}>Password must be at least {min} characters.</p>
-       : <p style={{ color: successColor }}>Password is good!</p>)}
-   </div>
- )
+export function Password({
+  label,
+  placeholder,
+  min,
+  errorColor,
+  successColor,
+  gap,
+}) {
+  const [value, setValue] = React.useState("")
+  const [showValidations, setShowValidations] = React.useState(false)
+  // Checks the length of the password.
+  const isTooShort = value.length < min
+  return (
+    <div style={{ display: "grid", gridGap: gap }}>
+      <label>{label}</label>
+      <input
+        type="password"
+        placeholder={placeholder}
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        onBlur={() => setShowValidations(true)}
+      />
+      {showValidations &&
+        (isTooShort ? (
+          <p style={{ color: errorColor }}>
+            Password must be at least {min} characters.
+          </p>
+        ) : (
+          <p style={{ color: successColor }}>Password is good!</p>
+        ))}
+    </div>
+  )
 }
 ```
 
@@ -180,7 +201,7 @@ Using Framer’s API lets you integrate code components into your designs much m
 
 Check out the following resources to learn more about code components and React:
 
-* ​[**Framer API documentation ›**](https://www.framer.com/api)
-* ​[**Creating Code Components in Framer X ›**](https://www.framer.com/blog/posts/creating-code-components/)
-* ​[**Official Intro to React Tutorial ›**](https://reactjs.org/tutorial/tutorial.html/)
-* ​[**React for Web Designers ›**](https://www.framer.com/blog/posts/react-for-web-designers/)
+- ​[**Framer API documentation ›**](https://www.framer.com/api)
+- ​[**Creating Code Components in Framer X ›**](https://www.framer.com/blog/posts/creating-code-components/)
+- ​[**Official Intro to React Tutorial ›**](https://reactjs.org/tutorial/tutorial.html/)
+- ​[**React for Web Designers ›**](https://www.framer.com/blog/posts/react-for-web-designers/)
