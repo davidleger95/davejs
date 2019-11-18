@@ -2,6 +2,10 @@
 label: Blog Post
 hide_body: false
 fields:
+- name: draft
+  type: boolean
+  label: Draft
+  default: false
 - name: title
   type: text
   config:
@@ -53,9 +57,9 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
-- content/blog/the-literary-medium-of-source-code.md
-- content/blog/perspectives-on-failure.md
 - content/blog/why-the-box-model-is-integral-to-web-design.md
 - content/blog/components-in-framer-x.md
-- content/blog/dynamic-theming-with-css-variables.md
 - content/blog/embracing-webflow-as-a-frontend-developer.md
+- content/blog/dynamic-theming-with-css-variables.md
+- content/blog/perspectives-on-failure.md
+- content/blog/the-literary-medium-of-source-code.md
