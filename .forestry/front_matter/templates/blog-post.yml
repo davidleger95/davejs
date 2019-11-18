@@ -57,6 +57,7 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
+- content/blog/perspectives-on-failure.md
 - content/blog/career-stability-while-working-for-a-startup.md
 - content/blog/my-personal-branding-journey.md
 - content/blog/the-literary-medium-of-source-code.md
@@ -64,4 +65,3 @@ pages:
 - content/blog/components-in-framer-x.md
 - content/blog/embracing-webflow-as-a-frontend-developer.md
 - content/blog/dynamic-theming-with-css-variables.md
-- content/blog/perspectives-on-failure.md

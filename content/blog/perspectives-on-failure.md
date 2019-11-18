@@ -1,17 +1,17 @@
 ---
 draft: false
-date: 2019-11-16T19:37:20.000+00:00
+date: 2019-11-17T19:37:20Z
 tags:
-  - opinion
-  - startups
+- opinion
+- startups
 title: Perspective on Failure
 description: How I cope with constant failure while working at a startup.
 heroImage:
   img: "../assets/failure-hero-1.png"
   alt: The letter F, circled
 shareImage: "../assets/failure-share-image-2.png"
----
 
+---
 Working for a startup, my coworkers and I are often attempting to solve problems that have never been attempted before. We're trying new things, pushing the limits of what's possible. Inevitably, we often push past limits and fail. We experience failure almost on a daily basis. For instance: scrapping an entire project just days after launch. Sometimes these failures are hard to reconcile, especially when people put months or years of work into a project. And they happen often enough that, before we can even process one failure, another one is likely sneaking up behind us.
 
 In a work environment like a startup, it’s common for failures to compound and bring people to a breaking point. I’ve seen coworkers struggle with the stress of failure to the point of burn out and sometimes even quitting. These people aren’t weak-willed nor incapable of handing stress — they’re actually some of the strongest, smartest, and most resilient people I’ve ever worked with.
