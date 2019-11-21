@@ -4,7 +4,7 @@ tags:
 - opinion
 - success
 draft: false
-title: 'Kill Your Darlings: Avoiding the Trap of Mild Success'
+title: 'Kill Your Darlings: Avoiding the Trap of Mild Successes'
 description: Arguably worse than failures, mild successes can make us happy, but they
   can cause us to stagnate and settle for what's comfortable, preventing us from chasing
   what's desirable.
