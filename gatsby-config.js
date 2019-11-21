@@ -4,7 +4,7 @@ module.exports = {
     author: `David Leger`,
     shortDescription: `Web Developer & Designer`,
     description: `I'm a frontend developer from Halifax, Canada. I'm passionate about creating great experiences on the web!`,
-    siteUrl: `https://davejs.dev/`,
+    siteUrl: `https://davejs.dev`,
     social: {
       twitter: `_davejs`,
       instagram: `_davejs`,
@@ -87,5 +87,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 }
