@@ -57,6 +57,7 @@ fields:
   label: Share Image
   description: 'For Social Media '
 pages:
+- content/blog/kill-your-darlings-avoiding-the-trap-of-mild-success.md
 - content/blog/career-stability-while-working-for-a-startup.md
 - content/blog/perspectives-on-failure.md
 - content/blog/my-personal-branding-journey.md
