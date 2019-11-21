@@ -32,14 +32,12 @@ It might have been a good job to start with, but you've grown so much in a year.
 
 I think it's important to be proactive in identifying when we've achieved a mild success. Identify it. And kill it.
 
-> In order to achieve great success, we must abandon our merely mild successes.
+> In order to achieve great success, we must abandon success that is merely mild.
 
-_Kill your darlings._ This is a common piece of advice given to aspiring authors. It's meant to encourage authors to let go of their most precious passages when they don't support the work as a whole. I think this can be more broadly applied to many parts of our lives beyond writing. In order to achieve great success, we must abandon our merely mild successes. Although they can make us happy, mild successes can cause us to stagnate and settle for what's comfortable, preventing us from pursuing what's desirable.
+_Kill your darlings._ This is a common piece of advice given to aspiring authors. It's meant to encourage authors to let go of their most precious passages when they don't support the work as a whole. I think this can be more broadly applied to many parts of our lives beyond writing. In order to achieve great success, we must abandon success that is merely mild. Although they can make us happy, mild successes can cause us to stagnate and settle for what's comfortable, preventing us from pursuing what's desirable.
 
-In my earlier example, I identified your hypothetical first job as a likely suspect for mild success. Surely I'm not advocating for you to quit your comfortable job before finding a better one, right? Well actually... why not? Seriously. Ask yourself, _would I be better off quitting my job and dedicating all my attention and effort to improving my skills and applying for a job I actually love?_ Is it distracting you from finding the job that will lead to a better career?
+And yes, that means leaving a job that might be comfortable, that eventually don't align with your goals, for opportunities that challenge you. In the novel of your life, kill your darlings. Cut out the meandering sub-plots. No matter how precious, they distract from the overall story you wish to tell.
 
-In the novel of your life, kill your darlings. Kill the chapters that are just side-plots. They're just distractions from the main story you want to tell.
-
-I encourage you to apply this concept to all parts of your life, and I suspect you'll find at least one darling worth killing.
+I used one's career journey as an example in this post, but . I encourage you to apply this concept to all parts of your life. I suspect you'll find at least one darling worth killing.
 
 Happy hunting. 🔪
