@@ -9,9 +9,9 @@ description: Arguably worse than failures, mild successes can make us happy, but
   can cause us to stagnate and settle for what's comfortable, preventing us from chasing
   what's desirable.
 heroImage:
-  img: "../assets/kill-your-darlings-header-1.png"
+  img: "../assets/kill-your-darlings-header-2.png"
   alt: Kill your darlings
-shareImage: "../assets/kill-your-darlings-share-2.png"
+shareImage: "../assets/kill-your-darlings-share-3.png"
 
 ---
 In a previous post, I shared my [perspective on failure](/perspectives-on-failure/). I emphasized the lasting negative impact failure can have on us. It can be overwhelming and lead to undue stress if not managed well.
