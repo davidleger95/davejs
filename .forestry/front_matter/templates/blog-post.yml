@@ -58,9 +58,9 @@ fields:
   description: 'For Social Media '
 pages:
 - content/blog/kill-your-darlings-avoiding-the-trap-of-mild-success.md
-- content/blog/career-stability-while-working-for-a-startup.md
-- content/blog/perspectives-on-failure.md
 - content/blog/my-personal-branding-journey.md
+- content/blog/perspectives-on-failure.md
+- content/blog/career-stability-while-working-for-a-startup.md
 - content/blog/the-literary-medium-of-source-code.md
 - content/blog/why-the-box-model-is-integral-to-web-design.md
 - content/blog/components-in-framer-x.md
