@@ -18,17 +18,17 @@ In a previous post, I shared my [perspective on failure](/perspectives-on-failur
 
 However, at the very least failure is explicit. It can come in the form of a poor performance review from a manager. A missed deadline. Another person being angry with us. And notably from these examples, our realization of failure is typically forced upon us though means out of our control.
 
-Although it can be tough to handle, the knowledge of a failure gives us permission to move beyond it. It's a bit of a blessing in disguise. Failure is short-term pain, but can also be the spark that triggers radical change and ultimately propel us to successes in the future.
+Although it can be tough to handle, the knowledge of failure gives us permission to move beyond it. It's a bit of a blessing in disguise. Failure is short-term pain, but can also be the spark that triggers radical change which can ultimately propel us to some of our greatest successes. In this post, I want to explore what we should do when the lines aren't so clear cut between failure and success.
 
 > Mild success is failure in disguise.
 
-Equally, if not more than failure, we should be wary of mild successes. Mild success is failure in disguise. It seeds regret. It's settling for _good enough_ when we are capable of so much more. Mild successes can lead us to sink months, years, or even a lifetime of effort into things we'd rather not spend our time doing.
+Equally, if not more than failure, we should be wary of mild success. Mild success is failure in disguise. It seeds regret. It's settling for _good enough_ when we are capable of so much more. Mild successes can lead us to spend months, years, or even a lifetime on auto-pilot, instead of seeking new and exciting challenges.
 
-Perhaps you're at your first job out of university. The job is good! You're satisfied and you get paid decently well, especially compared to when you had no income as a student. About a year in to the job, you've learned a lot and feel your career is progressing. By all accounts, you're successful, and your parents are proud. You've got some complaints, but they're minor. You know there's other jobs out there that seem like a step up, but nah... your current job is pretty good. What more could you ask for?
+Perhaps you're at your first job out of university. The job is good! You're satisfied and you get paid decently well, especially compared to when you had no income as a student. About a year into the job, you've learned a lot. Things feel good. It's comfortable and you're relatively happy, maybe a little bit bored but you can deal with that. By all accounts, you're successful, and your parents are proud. You've got some complaints, but they're minor. You know there are other jobs out there that seem like a step up, but nah... your current job is pretty good. What more could you ask for?
 
-This is very likely a mild success. 
+This is very likely a mild success.
 
-It might have been a good job to start with, but you've grown so much in a year. This is your first job out of university ,it's all you've ever known, so you feel somewhat sentimental about the company and your coworkers. It's your one and only darling job.
+It might have been a good job to start with, but this is your first job out of university. It's all you've ever known, so you feel somewhat sentimental about the company and your coworkers. It's your one and only darling job.
 
 I think it's important to be proactive in identifying when we've achieved a mild success. Identify it. And kill it.
 
@@ -36,8 +36,8 @@ I think it's important to be proactive in identifying when we've achieved a mild
 
 _Kill your darlings._ This is a common piece of advice given to aspiring authors. It's meant to encourage authors to let go of their most precious passages when they don't support the work as a whole. I think this can be more broadly applied to many parts of our lives beyond writing. In order to achieve great success, we must abandon success that is merely mild. Although they can make us happy, mild successes can cause us to stagnate and settle for what's comfortable, preventing us from pursuing what's desirable.
 
-And yes, that means leaving a job that might be comfortable, that eventually don't align with your goals, for opportunities that challenge you. In the novel of your life, kill your darlings. Cut out the meandering sub-plots. No matter how precious, they distract from the overall story you wish to tell.
+And yes, that means leaving a job that has become merely comfortable for opportunities that challenge and excite you. In the novel of your life, kill your darlings. Cut out the meandering subplots. No matter how precious, they distract from the overall story you wish to tell.
 
-I used one's career journey as an example in this post, but . I encourage you to apply this concept to all parts of your life. I suspect you'll find at least one darling worth killing.
+Beyond the career example I described, I encourage you to apply this concept to all parts of your life. I suspect you'll find at least one darling worth killing.
 
 Happy hunting. 🔪
