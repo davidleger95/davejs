@@ -24,6 +24,8 @@ Although it can be tough to handle, the knowledge of failure gives us permission
 
 Equally, if not more than failure, we should be wary of mild success. Mild success is failure in disguise. It seeds regret. It's settling for _good enough_ when we are capable of so much more. Mild successes can lead us to spend months, years, or even a lifetime on auto-pilot, instead of seeking new and exciting challenges.
 
+Let's explore a hypothetical scenario.
+
 Perhaps you're at your first job out of university. The job is good! You're satisfied and you get paid decently well, especially compared to when you had no income as a student. About a year into the job, you've learned a lot. Things feel good. It's comfortable and you're relatively happy, maybe a little bit bored but you can deal with that. By all accounts, you're successful, and your parents are proud. You've got some complaints, but they're minor. You know there are other jobs out there that seem like a step up, but nah... your current job is pretty good. What more could you ask for?
 
 This is very likely a mild success.
