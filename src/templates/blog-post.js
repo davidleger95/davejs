@@ -117,6 +117,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ]
             : []),
           {
+            property: `og:type`,
+            content: `article`,
+          },
+          {
             property: "og:image",
             content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
           },

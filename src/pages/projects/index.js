@@ -86,7 +86,7 @@ const HomePage = ({ data, location }) => {
           {projects.map(({ title, description, url, tags, image }) => (
             <Project key={url}>
               <ImageContainer>
-                <Thumbnail src={image.publicURL} />
+                <Thumbnail src={image.publicURL} loading="lazy" />
               </ImageContainer>
               <Title>{title}</Title>
               <Description>{description}</Description>
