@@ -1,16 +1,16 @@
 ---
-draft: true
-date: 2019-11-17T22:54:21.000+00:00
+draft: false
+date: 2019-11-18T22:54:21Z
 tags:
 - opinion
 - startups
 - manifold
-title: Job Stability in Startupland
+title: Job Security in Startup-land
 description: Why working for a startup is not be as risky as it might seem.
 heroImage:
-  img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
-  alt: Password field
-shareImage: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
+  img: "../assets/manifold-office.jpg"
+  alt: The Manifold office
+shareImage: "../assets/job-security.png"
 
 ---
 When I started my job at [Manifold](https://manifold.co), my parents warned me about taking a potentially unstable job. Leaving a stable job at [Cvent](https://cvent.com) to go work for a Series A startup seemed like a big risk.
