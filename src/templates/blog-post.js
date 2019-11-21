@@ -107,6 +107,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={`${post.frontmatter.title} by David Leger`}
         description={post.frontmatter.description || post.excerpt}
+        type="article"
         meta={[
           ...(post.tags
             ? [
@@ -116,10 +117,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 },
               ]
             : []),
-          {
-            property: `og:type`,
-            content: `article`,
-          },
           {
             property: "og:image",
             content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
