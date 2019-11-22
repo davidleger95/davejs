@@ -16,7 +16,7 @@ shareImage: "../assets/kill-your-darlings-share-3.png"
 ---
 In a previous post, I shared my [perspective on failure](/perspectives-on-failure/). I emphasized the lasting negative impact failure can have on us. It can be overwhelming and lead to undue stress if not managed well.
 
-However, at the very least failure is explicit. It can come in the form of a poor performance review from a manager. A missed deadline. Another person being angry with us. And notably from these examples, our realization of failure is typically forced upon us though means out of our control.
+However, at the very least failure is explicit. It can come in the form of a poor performance review from a manager. A missed deadline. Another person being angry with us. And notably from these examples, our realization of failure is typically forced upon us through means out of our control.
 
 Although it can be tough to handle, the knowledge of failure gives us permission to move beyond it. It's a bit of a blessing in disguise. Failure is short-term pain, but can also be the spark that triggers radical change which can ultimately propel us to some of our greatest successes. In this post, I want to explore what we should do when the lines aren't so clear cut between failure and success.
 
