@@ -6,6 +6,7 @@ export const Tag = styled.li`
   background-color: #8884;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 
   &:not(:last-child) {
     margin-right: 0.5rem;
