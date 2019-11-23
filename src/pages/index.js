@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 import accent from "../components/davejs-lead-accent.png"
 import LinkButton from "../components/styled/LinkButton"
+import { List, BlogPost } from "./blog"
 
 const Container = styled.main`
   margin: 15vh 0;
@@ -69,10 +70,7 @@ const ProjectList = styled.ul`
   }
 `
 
-const Project = styled.a.attrs({
-  target: "_blank",
-  rel: "noopener noreferrer",
-})`
+const Project = styled.a`
   display: grid;
   grid-gap: 0.5rem;
   text-decoration: none;
@@ -105,25 +103,13 @@ const HomePage = ({ data, location }) => {
         <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
       </Container>
       <Section>
-        <h2>A Bit About Me</h2>
-        <p>
-          Hey! My name is David Leger and I'm a web developer living in Halifax,
-          Nova Scotia. I go by dave.js because I love writing JavaScript (and
-          there are three other people with my name at work)! I love combining
-          creativity with technical skills to design and build awesome
-          experiences on the web.
-        </p>
-        <p>
-          I currently work at{" "}
-          <a
-            href="https://manifold.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Manifold
-          </a>{" "}
-          building marketplaces for cloud services and APIs.
-        </p>
+        <h2>Recent Posts</h2>
+        <List>
+          {data.blogPosts.edges.map(({ node }, i) => (
+            <BlogPost node={node} i={i} key={node.fields.slug} />
+          ))}
+        </List>
+        <BigLink to="/blog">All Posts</BigLink>
       </Section>
       <Section>
         <h2>Recent Projects</h2>
@@ -152,6 +138,27 @@ const HomePage = ({ data, location }) => {
             say hi on Twitter
           </a>{" "}
           if you'd like to chat!
+        </p>
+      </Section>
+      <Section>
+        <h2>A Bit About Me</h2>
+        <p>
+          Hey! My name is David Leger and I'm a web developer living in Halifax,
+          Nova Scotia. I go by dave.js because I love writing JavaScript (and
+          there are three other people with my name at work)! I love combining
+          creativity with technical skills to design and build awesome
+          experiences on the web.
+        </p>
+        <p>
+          I currently work at{" "}
+          <a
+            href="https://manifold.co"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Manifold
+          </a>{" "}
+          building marketplaces for cloud services and APIs.
         </p>
       </Section>
     </Layout>
@@ -188,6 +195,37 @@ export const pageQuery = graphql`
         url
         image {
           publicURL
+        }
+      }
+    }
+    blogPosts: allMarkdownRemark(
+      filter: { frontmatter: { draft: { eq: false } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            tags
+            heroImage {
+              img {
+                childImageSharp {
+                  fluid(maxWidth: 640) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              alt
+            }
+          }
         }
       }
     }

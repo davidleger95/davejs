@@ -13,20 +13,16 @@ const Section = styled.section`
   margin: 5vh 0;
 `
 
-const List = styled.div`
+export const List = styled.div`
   padding: 0;
   margin: 0;
   list-style: none;
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
 `
 
 const LinkBlock = styled(Link)`
   text-decoration: none;
-
-  h4 {
-    margin: 0;
-  }
 
   p {
     margin: 0;
@@ -74,6 +70,35 @@ const Excerpt = styled.p`
   font-size: 1em;
 `
 
+export const BlogPost = ({ node, i }) => {
+  const title = node.frontmatter.title || node.fields.slug
+
+  const image = node.frontmatter.heroImage.img
+  return (
+    <LinkBlock to={node.fields.slug}>
+      <Post key={node.fields.slug} featured={i === 0}>
+        <HeroImage {...image.childImageSharp} />
+        <StyledDate>
+          {node.frontmatter.date} &bull; {node.timeToRead} min.
+        </StyledDate>
+        <Title>{title}</Title>
+        <Excerpt
+          dangerouslySetInnerHTML={{
+            __html: node.frontmatter.description || node.excerpt,
+          }}
+        />
+        {node.frontmatter.tags && (
+          <TagList>
+            {node.frontmatter.tags.map(tag => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </TagList>
+        )}
+      </Post>
+    </LinkBlock>
+  )
+}
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
@@ -85,34 +110,9 @@ const BlogIndex = ({ data, location }) => {
       <Section>
         <h2>Latest Posts</h2>
         <List>
-          {posts.map(({ node }, i) => {
-            const title = node.frontmatter.title || node.fields.slug
-
-            const image = node.frontmatter.heroImage.img
-            return (
-              <LinkBlock to={node.fields.slug}>
-                <Post key={node.fields.slug} featured={i === 0}>
-                  <HeroImage {...image.childImageSharp} />
-                  <StyledDate>
-                    {node.frontmatter.date} &bull; {node.timeToRead} min.
-                  </StyledDate>
-                  <Title>{title}</Title>
-                  <Excerpt
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                  {node.frontmatter.tags && (
-                    <TagList>
-                      {node.frontmatter.tags.map(tag => (
-                        <Tag key={tag}>{tag}</Tag>
-                      ))}
-                    </TagList>
-                  )}
-                </Post>
-              </LinkBlock>
-            )
-          })}
+          {posts.map(({ node }, i) => (
+            <BlogPost node={node} i={i} key={node.fields.slug} />
+          ))}
         </List>
       </Section>
     </Layout>
