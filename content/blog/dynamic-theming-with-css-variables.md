@@ -8,6 +8,9 @@ tags:
   - manifold
 title: Dynamic Theming with CSS Variables
 description: How I built the Manifold UI theming system.
+crossPost:
+  originName: Manifold
+  canonicalUrl: https://www.manifold.co/blog/dynamic-theming-with-css-variables
 heroImage:
   img: "../assets/css variables.jpeg"
   alt: Dark/Light theme toggle

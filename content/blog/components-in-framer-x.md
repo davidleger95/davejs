@@ -11,6 +11,9 @@ title: Creating Interactive Code Components in Framer X
 description:
   Learn how to create interactive components with React and use them to
   build better prototypes.
+crossPost:
+  originName: Framer
+  canonicalUrl: https://www.framer.com/blog/posts/introduction-to-code-components/
 heroImage:
   img: "../assets/Screen Shot 2019-11-16 at 8.03.17 PM.png"
   alt: Password field
@@ -89,7 +92,7 @@ export function Password() {
 }
 ```
 
-Now you have a simple password field. Because it includes a standard `**input**` tag, it's already able to accept text when you type.
+Now you have a simple password field. Because it includes a standard `input` tag, it's already able to accept text when you type.
 
 Let's add some controls so you can customize your password field.
 
@@ -139,9 +142,9 @@ addPropertyControls(Password, {
 
 ![](https://d33wubrfki0l68.cloudfront.net/2d1254af78edb30d637ebed46bbe58c1f1f64349/bcec6/static/blog/posts/introduction-to-code-components/props.jpg)
 
-Using these props is fairly straightforward for all except `**min**`. Let’s add some logic to keep track of the input field's value and compare it to `**min**` to conditionally show the error state. To do this, use the React function `**useState**`.
+Using these props is fairly straightforward for all except `min`. Let’s add some logic to keep track of the input field's value and compare it to `min` to conditionally show the error state. To do this, use the React function `useState`.
 
-`**useState**` takes one parameter, which is the default value, and returns the current value and a function to update the current value.
+`useState` takes one parameter, which is the default value, and returns the current value and a function to update the current value.
 
 ```jsx
 const [myValue, setMyValue] = React.useState("My Default Value")
@@ -149,7 +152,7 @@ const [myValue, setMyValue] = React.useState("My Default Value")
 
 To learn more about states, check out the [**official React documentation**](https://reactjs.org/docs/hooks-state.html).
 
-For this password component we'll use two states: one to keep track of the password value as it changes and another to keep track of whether we should show the validations. In this case, we're using `**onBlur**` so that the password will only be validated once the user leaves the field.
+For this password component we'll use two states: one to keep track of the password value as it changes and another to keep track of whether we should show the validations. In this case, we're using `onBlur` so that the password will only be validated once the user leaves the field.
 
 ```jsx
 export function Password({
@@ -193,7 +196,7 @@ Here's what it looks like in action:
 
 ## Our finished component
 
-That's it! You now have an interactive password component that validates input. There's more you can add to this, if you like. For example, you can check to see if a password contains certain characters with `**value.match(...)**` or change the border color of the input based on error messages. With code components the possibilities are endless.
+That's it! You now have an interactive password component that validates input. There's more you can add to this, if you like. For example, you can check to see if a password contains certain characters with `value.match(...)` or change the border color of the input based on error messages. With code components the possibilities are endless.
 
 ## What's next?
 

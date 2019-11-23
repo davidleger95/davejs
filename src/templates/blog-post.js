@@ -6,6 +6,7 @@ import { TagList, Tag } from "../components/styled/Tag"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import IconLaunch from "@material-ui/icons/Launch"
 
 const Header = styled.header`
   display: grid;
@@ -97,10 +98,60 @@ const NavLink = styled(Link)`
   }
 `
 
+const Toast = styled.div`
+  position: relative;
+  border-left: 0.25rem solid var(--text-color);
+  padding: 1.25em;
+  margin: 2rem 0;
+  font-size: 0.8em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--text-color);
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  p {
+    font-family: inherit;
+    margin: 0;
+    font-style: italic;
+  }
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    & > *:first-child {
+      text-decoration: underline;
+    }
+  }
+`
+
+const CrossPost = ({ originName, canonicalUrl }) => (
+  <Toast>
+    <p>
+      Cross-posted from {originName}.{" "}
+      <a href={canonicalUrl} target="_blank" rel="noopener noreferrer">
+        <span>See the original post here.</span> <IconLaunch />
+      </a>
+    </p>
+  </Toast>
+)
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  const { crossPost } = post.frontmatter
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -114,6 +165,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 {
                   property: "keywords",
                   content: post.tags.join(","),
+                },
+              ]
+            : []),
+          ...(crossPost
+            ? [
+                {
+                  property: "canonical_url",
+                  content: crossPost.canonicalUrl,
                 },
               ]
             : []),
@@ -153,6 +212,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </TagList>
           )}
         </Header>
+        {crossPost && <CrossPost {...crossPost} />}
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <footer>
@@ -205,6 +265,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        crossPost {
+          originName
+          canonicalUrl
+        }
         heroImage {
           img {
             src: childImageSharp {
