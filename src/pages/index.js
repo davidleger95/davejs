@@ -51,7 +51,7 @@ const Lead = styled.p`
 `
 
 const Section = styled.section`
-  margin: 12.5vh 0;
+  margin: 10vh 0;
 `
 
 const ProjectList = styled.ul`
