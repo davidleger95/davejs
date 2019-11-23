@@ -126,21 +126,6 @@ const HomePage = ({ data, location }) => {
         <BigLink to="/projects">All Projects</BigLink>
       </Section>
       <Section>
-        <h2>Get in Touch</h2>
-        <p></p>
-        <p>
-          <a href="mailto:davidleger95@me.com">Send me an email</a>, or{" "}
-          <a
-            href="https://twitter.com/_davejs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            say hi on Twitter
-          </a>{" "}
-          if you'd like to chat!
-        </p>
-      </Section>
-      <Section>
         <h2>A Bit About Me</h2>
         <p>
           Hey! My name is David Leger and I'm a web developer living in Halifax,
@@ -159,6 +144,21 @@ const HomePage = ({ data, location }) => {
             Manifold
           </a>{" "}
           building marketplaces for cloud services and APIs.
+        </p>
+      </Section>
+      <Section>
+        <h2>Get in Touch</h2>
+        <p></p>
+        <p>
+          <a href="mailto:davidleger95@me.com">Send me an email</a>, or{" "}
+          <a
+            href="https://twitter.com/_davejs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            say hi on Twitter
+          </a>{" "}
+          if you'd like to chat!
         </p>
       </Section>
     </Layout>
