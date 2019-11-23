@@ -159,20 +159,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={`${post.frontmatter.title} by David Leger`}
         description={post.frontmatter.description || post.excerpt}
         type="article"
+        canonicalUrl={crossPost && crossPost.canonicalUrl}
         meta={[
           ...(post.tags
             ? [
                 {
                   property: "keywords",
                   content: post.tags.join(","),
-                },
-              ]
-            : []),
-          ...(crossPost
-            ? [
-                {
-                  property: "canonical_url",
-                  content: crossPost.canonicalUrl,
                 },
               ]
             : []),
