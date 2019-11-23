@@ -215,18 +215,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <h3>More Posts</h3>
       {(previous || next) && (
         <BottomNav>
-          {previous && (
-            <NavLink to={previous.fields.slug} rel="prev">
-              <Image fluid={previous.frontmatter.heroImage.img.src.fluid} />
-              <h4>{previous.frontmatter.title}</h4>
-              <p>{previous.frontmatter.description}</p>
-            </NavLink>
-          )}
           {next && (
             <NavLink to={next.fields.slug} rel="next">
               <Image fluid={next.frontmatter.heroImage.img.src.fluid} />
               <h4>{next.frontmatter.title}</h4>
               <p>{next.frontmatter.description}</p>
+            </NavLink>
+          )}
+          {previous && (
+            <NavLink to={previous.fields.slug} rel="prev">
+              <Image fluid={previous.frontmatter.heroImage.img.src.fluid} />
+              <h4>{previous.frontmatter.title}</h4>
+              <p>{previous.frontmatter.description}</p>
             </NavLink>
           )}
         </BottomNav>

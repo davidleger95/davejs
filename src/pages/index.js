@@ -51,7 +51,7 @@ const Lead = styled.p`
 `
 
 const Section = styled.section`
-  margin: 15vh 0;
+  margin: 12.5vh 0;
 `
 
 const ProjectList = styled.ul`
@@ -102,6 +102,7 @@ const HomePage = ({ data, location }) => {
         <Lead>{lead}</Lead>
         <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
       </Container>
+      <hr />
       <Section>
         <h2>Recent Posts</h2>
         <List>
@@ -111,6 +112,7 @@ const HomePage = ({ data, location }) => {
         </List>
         <BigLink to="/blog">All Posts</BigLink>
       </Section>
+      <hr />
       <Section>
         <h2>Recent Projects</h2>
         <ProjectList>
@@ -125,6 +127,7 @@ const HomePage = ({ data, location }) => {
         </ProjectList>
         <BigLink to="/projects">All Projects</BigLink>
       </Section>
+      <hr />
       <Section>
         <h2>A Bit About Me</h2>
         <p>
@@ -146,6 +149,7 @@ const HomePage = ({ data, location }) => {
           building marketplaces for cloud services and APIs.
         </p>
       </Section>
+      <hr />
       <Section>
         <h2>Get in Touch</h2>
         <p></p>
