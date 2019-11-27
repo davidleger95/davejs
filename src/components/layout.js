@@ -47,7 +47,7 @@ const Content = styled.main`
   grid-area: content;
 `
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
     query NavQuery {
       logoLight: file(absolutePath: { regex: "/davejs-logo-dark.png/" }) {

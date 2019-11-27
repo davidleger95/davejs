@@ -9,6 +9,7 @@ import SEO from "../components/seo"
 import accent from "../components/davejs-lead-accent.png"
 import LinkButton from "../components/styled/LinkButton"
 import { List, BlogPost } from "./blog"
+import ContactForm from "../components/ContactForm"
 
 const Container = styled.main`
   margin: 15vh 0;
@@ -152,18 +153,12 @@ const HomePage = ({ data, location }) => {
       <hr />
       <Section>
         <h2>Get in Touch</h2>
-        <p></p>
         <p>
-          <a href="mailto:davidleger95@me.com">Send me an email</a>, or{" "}
-          <a
-            href="https://twitter.com/_davejs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            say hi on Twitter
-          </a>{" "}
-          if you'd like to chat!
+          Would you like to work together? Just want to say hi? I'd love to hear
+          from you! Just fill out the form below and I'll get basck to you. 😊
         </p>
+
+        <ContactForm />
       </Section>
     </Layout>
   )

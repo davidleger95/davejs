@@ -32,6 +32,15 @@ html,
 body {
   margin: 0;
 }
+
+*:focus {
+  outline-color: var(--primary-color);
+}
+
+button {
+  appearance: none;
+}
+
 /* Theme */
 :root {
   --primary-color: #ff1c95;
