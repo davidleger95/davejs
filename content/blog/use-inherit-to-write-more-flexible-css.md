@@ -19,7 +19,7 @@ When setting up a web project there’s often a lot of boilerplate CSS to write 
 ```css
 /* 🚫 */
 a {
-	text-decoration: none;
+  text-decoration: none;
   color: black;
 }
 ```
@@ -30,9 +30,9 @@ Next, we build a navigation menu:
 
 ```html
 <nav>
-	<h1 class="title">My Site</h1>
-	<a href="/cats">😸</a>
-	<a href="/dogs">🐶</a>
+  <h1 class="title">My Site</h1>
+  <a href="/cats">😸</a>
+  <a href="/dogs">🐶</a>
 </nav>
 ```
 
@@ -40,18 +40,18 @@ And we add the following styles:
 
 ```css
 nav {
-	display: flex;
+  display: flex;
   backgorund-color: black;
   color: white;
 }
 
 nav .title {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 nav a {
-	display: block;
-	padding: 1em;
+  display: block;
+  padding: 1em;
 }
 ```
 
@@ -62,8 +62,8 @@ The simple approach would be to add a `color` property to the `nav a` selector:
 ```css
 /* 🚫 */
 nav a {
-	display: block;
-	padding: 1em;
+  display: block;
+  padding: 1em;
   color: white;
 }
 ```
@@ -75,7 +75,7 @@ Maybe we could go back to our original `a` selector and set the `color` to be wh
 ```css
 /* 🚫 */
 a {
-	text-decoration: none;
+  text-decoration: none;
   color: white;
 }
 ```
@@ -89,7 +89,7 @@ A lesser-known CSS value is `inherit`  and it turns out this is exactly what we 
 ```css
 /* ✅ */
 a {
-	text-decoration: inherit;
+  text-decoration: inherit;
   color: inherit;
 }
 ```
@@ -103,7 +103,7 @@ Another example is the `button` element, which has a default font size smaller t
 ```css
 /* ✅ */
 button {
-	font: inherit;
+  font: inherit;
 }
 ```
 
