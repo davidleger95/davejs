@@ -41,7 +41,7 @@ And we add the following styles:
 ```css
 nav {
   display: flex;
-  backgorund-color: black;
+  background-color: black;
   color: white;
 }
 
