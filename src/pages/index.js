@@ -154,8 +154,8 @@ const HomePage = ({ data, location }) => {
       <Section>
         <h2>Get in Touch</h2>
         <p>
-          Would you like to work together? Just want to say hi? I'd love to hear
-          from you! Just fill out the form below and I'll get basck to you. 😊
+          Would you like to work together? Just want to say hi? Either way, I'd love to hear
+          from you! Just send me a message below and I'll get back to you. 😊
         </p>
 
         <ContactForm />
