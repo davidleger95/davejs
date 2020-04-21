@@ -61,11 +61,21 @@ const Bio = () => {
         <h3>{author}</h3>
         <p>
           I’m an artsy software engineer living in Halifax, Canada. Enjoy my hot
-          takes <span role="img">🔥</span> and half-baked ideas{' '}
-          <span role="img">💡</span>.
+          takes{' '}
+          <span role="img" aria-label="fire">
+            🔥
+          </span>{' '}
+          and half-baked ideas{' '}
+          <span role="img" aria-label="lightbulb">
+            💡
+          </span>
+          .
         </p>
         <p>
-          Follow me on: <span role="img">🐦</span>
+          Follow me on:{' '}
+          <span role="img" aria-label="">
+            🐦
+          </span>
           <a
             href={`https://twitter.com/${social.twitter}`}
             target="_blank"
@@ -73,7 +83,10 @@ const Bio = () => {
           >
             Twitter
           </a>
-          , <span role="img">📝</span>
+          ,{' '}
+          <span role="img" aria-label="">
+            📝
+          </span>
           <a
             href={`https://medium.com/@${social.twitter}`}
             target="_blank"
@@ -81,7 +94,10 @@ const Bio = () => {
           >
             Medium
           </a>
-          , <span role="img">📸</span>
+          ,{' '}
+          <span role="img" aria-label="">
+            📸
+          </span>
           <a
             href={`https://instagram.com/${social.twitter}`}
             target="_blank"

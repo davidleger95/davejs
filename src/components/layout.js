@@ -86,11 +86,15 @@ const Layout = ({ title, children }) => {
         <Nav>
           {header}
           <StyledLink to="/experiments">
-            <span role="img">🧪</span>
+            <span role="img" aria-label="">
+              🧪
+            </span>
             <span class="text">Experiments</span>
           </StyledLink>
           <StyledLink to="/blog">
-            <span role="img">✏️</span>
+            <span role="img" aria-label="">
+              ✏️
+            </span>
             <span class="text">Blog</span>
           </StyledLink>
         </Nav>

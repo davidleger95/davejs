@@ -105,7 +105,10 @@ const HomePage = ({ data, location }) => {
       <hr />
       <Section>
         <h2>
-          <span role="img">✏️</span> Recent Posts
+          <span role="img" aria-label="">
+            ✏️
+          </span>{' '}
+          Recent Posts
         </h2>
         <List>
           {data.blogPosts.edges.map(({ node }, i) => (
@@ -117,7 +120,10 @@ const HomePage = ({ data, location }) => {
       <hr />
       <Section>
         <h2>
-          <span role="img">🧪</span> Recent Experiments
+          <span role="img" aria-label="">
+            🧪
+          </span>{' '}
+          Recent Experiments
         </h2>
         <ProjectList>
           {projects.slice(0, 3).map(({ title, url, image }) => (
@@ -134,7 +140,10 @@ const HomePage = ({ data, location }) => {
       <hr />
       <Section>
         <h2>
-          <span role="img">👨‍💻</span> A Bit About Me
+          <span role="img" aria-label="">
+            👨‍💻
+          </span>{' '}
+          A Bit About Me
         </h2>
         <p>
           Hey! My name is David Leger and I'm a web developer living in Halifax,
@@ -158,12 +167,18 @@ const HomePage = ({ data, location }) => {
       <hr />
       <Section>
         <h2>
-          <span role="img">📬</span> Get in Touch
+          <span role="img" aria-label="mailbox">
+            📬
+          </span>{' '}
+          Get in Touch
         </h2>
         <p>
           Would you like to work together? Just want to say hi? Either way, I'd
           love to hear from you! Just send me a message below and I'll get back
-          to you. <span role="img">😊</span>
+          to you.{' '}
+          <span role="img" aria-label="smile">
+            😊
+          </span>
         </p>
 
         <ContactForm />
