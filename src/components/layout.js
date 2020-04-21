@@ -1,51 +1,51 @@
-import React from "react"
-import { useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
-import Link from "./styled/Link"
+import React from 'react';
+import { useStaticQuery, Link } from 'gatsby';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
+import StyledLink from './styled/Link';
 
-import "../global.css"
+import '../global.css';
 
 const Container = styled.div`
-  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 640px) 1fr;
-  grid-template-rows: auto 1fr auto;
-  column-gap: 1rem;
   grid-template-areas:
-    "header header header"
-    "left content right"
-    "footer footer footer";
-`
+    'header header header'
+    'left content right'
+    'footer footer footer';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr minmax(auto, 640px) 1fr;
+  min-height: 100vh;
+  column-gap: 1rem;
+`;
 
 const Header = styled.header`
-  padding: 0 1rem;
   grid-area: header;
-`
+  padding: 0 1rem;
+`;
 
 const Nav = styled.nav`
   display: grid;
-  justify-content: start;
-  align-items: center;
   grid-auto-flow: column;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: start;
   max-width: 820px;
   margin: auto;
-`
+`;
 
 const Footer = styled.footer`
   grid-area: footer;
+  margin-top: 2rem;
   padding: 1rem;
+  color: var(--gray);
   font-size: 0.8rem;
   text-align: center;
-  color: var(--gray);
   background-color: var(--dark);
-  margin-top: 2rem;
-`
+`;
 
 const Content = styled.main`
   grid-area: content;
-`
+`;
 
 const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
@@ -65,35 +65,40 @@ const Layout = ({ title, children }) => {
         }
       }
     }
-  `)
+  `);
 
   const header = (
     <h1>
-      {/* <Link to={`/`}> */}
-      {/* HACK: swap out logo for light/dark theme */}
-      <picture data-theme="light">
-        <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
-      </picture>
-      <picture data-theme="dark">
-        <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
-      </picture>
-      {/* </Link> */}
+      <Link to={`/`}>
+        {/* HACK: swap out logo for light/dark theme */}
+        <picture data-theme="light">
+          <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
+        </picture>
+        <picture data-theme="dark">
+          <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
+        </picture>
+      </Link>
     </h1>
-  )
+  );
   return (
     <Container>
       <Header>
         <Nav>
           {header}
-          <Link to="/">home</Link>
-          <Link to="/projects">projects</Link>
-          <Link to="/blog">blog</Link>
+          <StyledLink to="/experiments">
+            <span role="img">🧪</span>
+            <span class="text">Experiments</span>
+          </StyledLink>
+          <StyledLink to="/blog">
+            <span role="img">✏️</span>
+            <span class="text">Blog</span>
+          </StyledLink>
         </Nav>
       </Header>
       <Content>{children}</Content>
       <Footer>(c) {new Date().getFullYear()}, David Leger</Footer>
     </Container>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

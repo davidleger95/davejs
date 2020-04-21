@@ -39,7 +39,11 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^13.3.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.0.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [

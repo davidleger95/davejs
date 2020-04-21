@@ -1,69 +1,43 @@
-import { Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
-  @keyframes wiggle {
-    0% {
-      transform: scaleX(1);
-    }
-    10% {
-      transform: scaleX(3);
-    }
-    20% {
-      transform: scaleX(2);
-    }
-    30% {
-      transform: scaleX(5);
-    }
-    40% {
-      transform: scaleX(1);
-    }
-    50% {
-      transform: scaleX(4);
-    }
-    60% {
-      transform: scaleX(3);
-    }
-    70% {
-      transform: scaleX(7);
-    }
-    80% {
-      transform: scaleX(4);
-    }
-    90% {
-      transform: scaleX(5);
-    }
-    100% {
-      transform: scaleX(1);
-    }
-  }
-
+  font-weight: 600;
   text-decoration: inherit;
 
-  &::after {
-    margin-top: 5px;
-    content: "";
+  .text {
+    position: relative;
+    margin-left: 0.15rem;
+    padding: 0.15em;
+  }
+
+  .text::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     display: block;
-    height: 2px;
-    width: 10px;
+    width: 100%;
+    height: 100%;
     background-color: var(--primary-color);
-    transform-origin: left;
-    animation: none 5s ease-in-out 0s infinite alternate;
-    /* doesn't work */
-    transition: transform 200ms ease-in-out;
+    transform: scale3d(0, 0.1, 1);
+    transform-origin: bottom;
+    opacity: 0.5;
+    transition: transform 100ms ease-in-out;
+    content: '';
   }
 
-  &:hover::after,
-  &:focus::after {
-    animation-name: wiggle;
+  &:hover,
+  &:focus {
+    outline: none;
+    .text::after {
+      transform: scale3d(0.9, 0.1, 1);
+    }
   }
 
-  &[aria-current="page"]::after {
-    height: 4px;
-    transform: scaleX(3);
-    /* starts animation at 10% (scale 3) */
-    animation-delay: -0.5s;
+  &[aria-current='page'] .text::after {
+    transform: scale3d(1, 1, 1);
   }
-`
+`;
 
-export default StyledLink
+export default StyledLink;

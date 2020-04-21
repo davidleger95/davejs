@@ -31,16 +31,16 @@ const Content = styled.div`
   p,
   ul,
   li {
-    line-height: 1.75;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 1.1em;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    line-height: 1.75;
   }
 
   blockquote p {
+    color: var(--primary-color);
     font-size: 1.4em;
     font-family: inherit;
     font-style: italic;
-    color: var(--primary-color);
   }
 
   img {
@@ -48,8 +48,8 @@ const Content = styled.div`
   }
 
   table {
-    border-collapse: collapse;
     min-width: 100%;
+    border-collapse: collapse;
   }
 
   th,
@@ -58,38 +58,38 @@ const Content = styled.div`
   }
 
   th {
-    background-color: var(--text-color);
     color: var(--background-color);
+    background-color: var(--text-color);
   }
 
   td {
-    border: 1px solid #8888;
     font-family: Roboto, sans-serif;
+    border: 1px solid #8888;
   }
 `
 
 const BottomNav = styled.nav`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 2.5rem;
 `
 
 const NavLink = styled(Link)`
   display: grid;
-  grid-template-rows: 8rem auto;
   grid-gap: 1rem;
+  grid-template-rows: 8rem auto;
+  align-content: start;
   text-decoration: none;
   transition: transform 100ms ease-in-out;
-  align-content: start;
 
   h4 {
     margin: 0;
   }
 
   p {
-    margin: 0;
     align-self: start;
+    margin: 0;
     font-size: 0.9em;
   }
 
@@ -100,26 +100,26 @@ const NavLink = styled(Link)`
 
 const Toast = styled.div`
   position: relative;
-  border-left: 0.25rem solid var(--text-color);
-  padding: 1.25em;
   margin: 2rem 0;
+  padding: 1.25em;
   font-size: 0.8em;
+  border-left: 0.25rem solid var(--text-color);
 
   &::before {
-    content: "";
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    z-index: -1;
     background-color: var(--text-color);
     opacity: 0.1;
-    z-index: -1;
+    content: "";
   }
 
   p {
-    font-family: inherit;
     margin: 0;
+    font-family: inherit;
     font-style: italic;
   }
   a {

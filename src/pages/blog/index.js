@@ -14,19 +14,19 @@ const Section = styled.section`
 `
 
 export const List = styled.div`
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: grid;
   grid-gap: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 `
 
 const LinkBlock = styled(Link)`
   text-decoration: none;
 
   p {
-    margin: 0;
     align-self: start;
+    margin: 0;
     font-size: 0.9em;
   }
 
@@ -40,18 +40,18 @@ const Post = styled.article`
   grid-gap: 1rem;
 
   @media (min-width: 550px) {
-    justify-items: start;
     grid-gap: 0.5rem 2rem;
-    grid-template-columns: ${props => (props.featured ? "1fr" : "16rem 1fr")};
     grid-template-rows: repeat(auto-fill, auto);
+    grid-template-columns: ${props => (props.featured ? "1fr" : "16rem 1fr")};
+    justify-items: start;
   }
 `
 
 const HeroImage = styled(Image)`
-  object-fit: cover;
-  height: 30vw;
   grid-row: 1 / span 4;
   width: 100%;
+  height: 30vw;
+  object-fit: cover;
 
   @media (min-width: 550px) {
     height: 9rem;
@@ -62,12 +62,12 @@ const Title = styled.h3`
   margin: 0;
 `
 const StyledDate = styled.small`
-  opacity: 0.75;
   font-size: 0.8em;
+  opacity: 0.75;
 `
 const Excerpt = styled.p`
-  opacity: 0.75;
   font-size: 1em;
+  opacity: 0.75;
 `
 
 export const BlogPost = ({ node, i }) => {

@@ -10,13 +10,13 @@ const Field = styled.div`
   grid-gap: 0.5rem;
 `
 const Input = css`
-  border-radius: 0.25rem;
-  color: inherit;
-  font-family: inherit;
-  font-size: 0.8em;
-  border: none;
   padding: 1.25rem;
+  color: inherit;
+  font-size: 0.8em;
+  font-family: inherit;
   background-color: hsla(0, 0%, 70%, 0.2);
+  border: none;
+  border-radius: 0.25rem;
 
   &::placeholder {
     font-style: italic;
@@ -33,17 +33,17 @@ const Textarea = styled.textarea`
 `
 
 const Button = styled.button`
-  color: var(--background-color);
-  background-color: var(--text-color);
-  padding: 1em 1.75em;
-  border-radius: 0.25rem;
-  font: inherit;
-  font-size: 0.8em;
-  font-weight: 600;
-  font-style: italic;
   justify-self: start;
-  transition: transform 100ms ease-in-out;
+  padding: 1em 1.75em;
+  color: var(--background-color);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.8em;
+  font-style: italic;
+  background-color: var(--text-color);
+  border-radius: 0.25rem;
   cursor: pointer;
+  transition: transform 100ms ease-in-out;
 
   &:hover {
     transform: scale(1.05);

@@ -89,5 +89,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: '@danbruegge/gatsby-plugin-stylelint',
+      options: { files: ['**/*.{js,jsx,css}'], fix: true },
+    },
   ],
-}
+};

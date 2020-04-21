@@ -1,29 +1,29 @@
 @font-face {
+  font-weight: bold;
   font-family: "Operator Mono";
   font-style: normal;
-  font-weight: bold;
   src: local("Operator Mono"), url("/OperatorMono-Bold.woff") format("woff");
 }
 
 @font-face {
+  font-weight: bold;
   font-family: "Operator Mono";
   font-style: italic;
-  font-weight: bold;
   src: local("Operator Mono"),
     url("/OperatorMono-BoldItalic.woff") format("woff");
 }
 
 @font-face {
+  font-weight: normal;
   font-family: "Operator Mono";
   font-style: normal;
-  font-weight: normal;
   src: local("Operator Mono"), url("/OperatorMono-Book.woff") format("woff");
 }
 
 @font-face {
+  font-weight: normal;
   font-family: "Operator Mono";
   font-style: italic;
-  font-weight: normal;
   src: local("Operator Mono"),
     url("/OperatorMono-BookItalic.woff") format("woff");
 }
@@ -55,9 +55,9 @@ button {
   --yellow: gold;
   --teal: teal;
   --gray: #888;
+  color: var(--text-color);
 
   font-family: "Operator Mono", monospace;
-  color: var(--text-color);
   background-color: var(--background-color);
   background-image: radial-gradient(circle, #17244c 0%, #0b132c 100%);
 }
@@ -86,25 +86,25 @@ button {
 }
 
 hr {
-  border: none;
-  background-color: white;
-  height: 0.25rem;
-  width: 0.25rem;
   position: relative;
-  overflow: visible;
-  opacity: 0.5;
+  width: 0.25rem;
+  height: 0.25rem;
   margin: 2rem auto;
+  overflow: visible;
+  background-color: white;
+  border: none;
+  opacity: 0.5;
 }
 
 hr::before,
 hr::after {
   position: absolute;
   left: -2rem;
-  content: "";
   display: inherit;
-  background-color: inherit;
-  height: inherit;
   width: inherit;
+  height: inherit;
+  background-color: inherit;
+  content: "";
 }
 
 hr::after {
@@ -112,8 +112,8 @@ hr::after {
 }
 
 p {
-  line-height: 1.5;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 a {
   color: inherit;
@@ -136,14 +136,13 @@ svg.MuiSvgIcon-root {
 code[class*="language-"],
 pre[class*="language-"] {
   color: #abb2bf;
-  background: none;
   font-family: "Operator Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
   line-height: 1.5;
+  white-space: pre;
+  text-align: left;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
   -moz-tab-size: 2;
   -o-tab-size: 2;
   tab-size: 2;
@@ -151,6 +150,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  background: none;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -181,26 +181,26 @@ code[class*="language-"] ::selection {
 }
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 0.5em;
-  margin: 0.5em 0;
-  overflow: auto;
   display: block;
   width: auto;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
+  font-size: 0.8em;
   background: var(--dark);
   border: 1px solid #5c6370;
   border-radius: 4px;
-  font-size: 0.8em;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
-  border-radius: 0.3em;
   white-space: normal;
+  border-radius: 0.3em;
 }
 
 .token.comment,
@@ -289,28 +289,27 @@ pre.line-numbers > code {
 
 .line-numbers .line-numbers-rows {
   position: absolute;
-  pointer-events: none;
   top: 0;
-  margin: 0.5em;
   width: 3em; /* works for line-numbers below 1000 lines */
+  margin: 0.5em;
   letter-spacing: -1px;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 
 .line-numbers-rows > span {
-  pointer-events: none;
   display: block;
   counter-increment: linenumber;
+  pointer-events: none;
 }
 
 .line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #5c6370;
   display: block;
   padding-right: 0.8em;
+  color: #5c6370;
   text-align: right;
+  content: counter(linenumber);
 }

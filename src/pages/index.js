@@ -1,27 +1,27 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import accent from "../components/davejs-lead-accent.png"
-import LinkButton from "../components/styled/LinkButton"
-import { List, BlogPost } from "./blog"
-import ContactForm from "../components/ContactForm"
+import accent from '../components/davejs-lead-accent.png';
+import LinkButton from '../components/styled/LinkButton';
+import { List, BlogPost } from './blog';
+import ContactForm from '../components/ContactForm';
 
 const Container = styled.main`
-  margin: 15vh 0;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 100px;
   align-items: center;
+  margin: 15vh 0;
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 const Lead = styled.p`
   position: relative;
@@ -37,28 +37,27 @@ const Lead = styled.p`
   &::before {
     --size: 1.2em;
     --offset: calc(-0.6 * var(--size));
-
-    display: block;
-    background-image: url(${accent});
-    background-size: contain;
-    background-repeat: no-repeat;
-    content: "";
-    height: var(--size);
-    width: var(--size);
     position: absolute;
     top: var(--offset);
     left: var(--offset);
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    background-image: url(${accent});
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
   }
-`
+`;
 
 const Section = styled.section`
   margin: 10vh 0;
-`
+`;
 
 const ProjectList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 
   margin: 0;
   padding: 0;
@@ -66,10 +65,10 @@ const ProjectList = styled.ul`
 
   img {
     width: 100%;
-    object-fit: cover;
     height: 8rem;
+    object-fit: cover;
   }
-`
+`;
 
 const Project = styled.a`
   display: grid;
@@ -84,17 +83,17 @@ const Project = styled.a`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 
 const BigLink = styled(LinkButton)`
   width: 20em;
   max-width: 100%;
   margin: 2rem auto;
-`
+`;
 
 const HomePage = ({ data, location }) => {
-  const { lead } = data.home
-  const { projects } = data.projects
+  const { lead } = data.home;
+  const { projects } = data.projects;
 
   return (
     <Layout location={location}>
@@ -105,7 +104,9 @@ const HomePage = ({ data, location }) => {
       </Container>
       <hr />
       <Section>
-        <h2>Recent Posts</h2>
+        <h2>
+          <span role="img">✏️</span> Recent Posts
+        </h2>
         <List>
           {data.blogPosts.edges.map(({ node }, i) => (
             <BlogPost node={node} i={i} key={node.fields.slug} />
@@ -115,7 +116,9 @@ const HomePage = ({ data, location }) => {
       </Section>
       <hr />
       <Section>
-        <h2>Recent Projects</h2>
+        <h2>
+          <span role="img">🧪</span> Recent Experiments
+        </h2>
         <ProjectList>
           {projects.slice(0, 3).map(({ title, url, image }) => (
             <li key={url}>
@@ -126,11 +129,13 @@ const HomePage = ({ data, location }) => {
             </li>
           ))}
         </ProjectList>
-        <BigLink to="/projects">All Projects</BigLink>
+        <BigLink to="/projects">All Experiments</BigLink>
       </Section>
       <hr />
       <Section>
-        <h2>A Bit About Me</h2>
+        <h2>
+          <span role="img">👨‍💻</span> A Bit About Me
+        </h2>
         <p>
           Hey! My name is David Leger and I'm a web developer living in Halifax,
           Nova Scotia. I go by dave.js because I love writing JavaScript (and
@@ -139,32 +144,35 @@ const HomePage = ({ data, location }) => {
           experiences on the web.
         </p>
         <p>
-          I currently work at{" "}
+          I currently work at{' '}
           <a
             href="https://manifold.co"
             target="_blank"
             rel="noopener noreferrer"
           >
             Manifold
-          </a>{" "}
+          </a>{' '}
           building marketplaces for cloud services and APIs.
         </p>
       </Section>
       <hr />
       <Section>
-        <h2>Get in Touch</h2>
+        <h2>
+          <span role="img">📬</span> Get in Touch
+        </h2>
         <p>
-          Would you like to work together? Just want to say hi? Either way, I'd love to hear
-          from you! Just send me a message below and I'll get back to you. 😊
+          Would you like to work together? Just want to say hi? Either way, I'd
+          love to hear from you! Just send me a message below and I'll get back
+          to you. <span role="img">😊</span>
         </p>
 
         <ContactForm />
       </Section>
     </Layout>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
 
 export const pageQuery = graphql`
   query HOME_PAGE {
@@ -229,4 +237,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
