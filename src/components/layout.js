@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import StyledLink from './styled/Link';
 
 import '../global.css';
+import ThemeToggle from './ThemeToggle';
 
 const Container = styled.div`
   display: grid;
@@ -19,7 +20,13 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
+  display: grid;
   grid-area: header;
+  grid-template-columns: 1fr auto;
+  justify-items: start;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
   padding: 0 1rem;
 `;
 
@@ -29,8 +36,6 @@ const Nav = styled.nav`
   grid-gap: 1rem;
   align-items: center;
   justify-content: start;
-  max-width: 820px;
-  margin: auto;
 `;
 
 const Footer = styled.footer`
@@ -98,6 +103,7 @@ const Layout = ({ title, children }) => {
             <span class="text">Blog</span>
           </StyledLink>
         </Nav>
+        <ThemeToggle />
       </Header>
       <Content>{children}</Content>
       <Footer>(c) {new Date().getFullYear()}, David Leger</Footer>

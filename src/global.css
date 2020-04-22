@@ -1,36 +1,41 @@
 @font-face {
   font-weight: bold;
-  font-family: "Operator Mono";
+  font-family: 'Operator Mono';
   font-style: normal;
-  src: local("Operator Mono"), url("/OperatorMono-Bold.woff") format("woff");
+  src: local('Operator Mono'), url('/OperatorMono-Bold.woff') format('woff');
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "Operator Mono";
+  font-family: 'Operator Mono';
   font-style: italic;
-  src: local("Operator Mono"),
-    url("/OperatorMono-BoldItalic.woff") format("woff");
+  src: local('Operator Mono'),
+    url('/OperatorMono-BoldItalic.woff') format('woff');
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Operator Mono";
+  font-family: 'Operator Mono';
   font-style: normal;
-  src: local("Operator Mono"), url("/OperatorMono-Book.woff") format("woff");
+  src: local('Operator Mono'), url('/OperatorMono-Book.woff') format('woff');
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Operator Mono";
+  font-family: 'Operator Mono';
   font-style: italic;
-  src: local("Operator Mono"),
-    url("/OperatorMono-BookItalic.woff") format("woff");
+  src: local('Operator Mono'),
+    url('/OperatorMono-BookItalic.woff') format('woff');
 }
 
 html,
 body {
+  box-sizing: border-box;
   margin: 0;
+}
+
+* {
+  box-sizing: inherit;
 }
 
 *:focus {
@@ -42,11 +47,8 @@ button {
 }
 
 /* Theme */
-:root {
-  --primary-color: #ff1c95;
-  --background-color: #0b132c;
-  --text-color: #e0e1e5;
-
+html,
+body {
   --dark: #0b132c;
   --dark-2: #17244c;
 
@@ -55,34 +57,39 @@ button {
   --yellow: gold;
   --teal: teal;
   --gray: #888;
+
   color: var(--text-color);
 
-  font-family: "Operator Mono", monospace;
+  font-family: 'Operator Mono', monospace;
   background-color: var(--background-color);
   background-image: radial-gradient(circle, #17244c 0%, #0b132c 100%);
 }
 
-[data-theme="light"] {
-  display: none;
+body[data-color-scheme='light'] {
+  --primary-color: #ff1c95;
+  --background-color: #e0e1e5;
+  --text-color: #0b132c;
+  background-image: radial-gradient(circle, #f8f8f8 0%, #e0e1e5 100%);
 }
-[data-theme="dark"] {
+
+body[data-color-scheme='light'] [data-theme='light'] {
   display: inherit;
 }
+body[data-color-scheme='light'] [data-theme='dark'] {
+  display: none;
+}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary-color: #ff1c95;
-    --background-color: #e0e1e5;
-    --text-color: #0b132c;
-    background-image: radial-gradient(circle, #f8f8f8 0%, #e0e1e5 100%);
-  }
+body[data-color-scheme='dark'] {
+  --primary-color: #ff1c95;
+  --background-color: #0b132c;
+  --text-color: #e0e1e5;
+}
 
-  [data-theme="light"] {
-    display: inherit;
-  }
-  [data-theme="dark"] {
-    display: none;
-  }
+body[data-color-scheme='dark'] [data-theme='light'] {
+  display: none;
+}
+body[data-color-scheme='dark'] [data-theme='dark'] {
+  display: inherit;
 }
 
 hr {
@@ -104,7 +111,7 @@ hr::after {
   width: inherit;
   height: inherit;
   background-color: inherit;
-  content: "";
+  content: '';
 }
 
 hr::after {
@@ -133,10 +140,10 @@ svg.MuiSvgIcon-root {
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: #abb2bf;
-  font-family: "Operator Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: 'Operator Mono', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   line-height: 1.5;
   white-space: pre;
   text-align: left;
@@ -153,25 +160,25 @@ pre[class*="language-"] {
   background: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: #383e49;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
   text-shadow: none;
   background: #9aa2b1;
 }
 
 @media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     text-shadow: none;
   }
 }
@@ -180,7 +187,7 @@ code[class*="language-"] ::selection {
   max-width: calc(100vw - 2rem);
 }
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
   display: block;
   width: auto;
   margin: 0.5em 0;
@@ -188,8 +195,8 @@ pre[class*="language-"] {
   overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   font-size: 0.8em;
   background: var(--dark);
   border: 1px solid #5c6370;
@@ -197,7 +204,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
   padding: 0.1em;
   white-space: normal;
   border-radius: 0.3em;
