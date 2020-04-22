@@ -51,9 +51,11 @@ const StyledToggle = styled.button`
 `;
 
 const ThemeToggle = () => {
-  const [value, setValue] = useState(
-    document && document.body.getAttribute('data-color-scheme') === 'dark'
-  );
+  const defaultValue =
+    typeof window !== 'undefined'
+      ? window.document.body.getAttribute('data-color-scheme') === 'dark'
+      : false;
+  const [value, setValue] = useState(defaultValue);
 
   return (
     <StyledToggle
