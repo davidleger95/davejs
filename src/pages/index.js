@@ -135,7 +135,7 @@ const HomePage = ({ data, location }) => {
             </li>
           ))}
         </ProjectList>
-        <BigLink to="/projects">All Experiments</BigLink>
+        <BigLink to="/experiments">All Experiments</BigLink>
       </Section>
       <hr />
       <Section>
