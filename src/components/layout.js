@@ -57,14 +57,14 @@ const Layout = ({ title, children }) => {
     query NavQuery {
       logoLight: file(absolutePath: { regex: "/davejs-logo-dark.png/" }) {
         childImageSharp {
-          fixed(width: 92, height: 50) {
+          fixed(height: 42) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       logoDark: file(absolutePath: { regex: "/davejs-logo-white.png/" }) {
         childImageSharp {
-          fixed(width: 92, height: 50) {
+          fixed(height: 42) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
