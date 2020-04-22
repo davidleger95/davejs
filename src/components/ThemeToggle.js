@@ -52,7 +52,7 @@ const StyledToggle = styled.button`
 
 const ThemeToggle = () => {
   const [value, setValue] = useState(
-    document.body.getAttribute('data-color-scheme') === 'dark'
+    document && document.body.getAttribute('data-color-scheme') === 'dark'
   );
 
   return (
