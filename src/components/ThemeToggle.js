@@ -39,8 +39,8 @@ const StyledToggle = styled.button`
     width: 1.25em;
     height: 1.25em;
     border-radius: 50%;
-    box-shadow: 0 0 8px -4px var(--text-color), 0 0 0 4px inset #fff,
-      -4px -2px 0 5px inset var(--moon);
+    box-shadow: 0 0 8px -4px var(--text-color), inset 0 0 0 4px #fff,
+      inset -4px -2px 0 5px var(--moon);
     opacity: 1;
   }
 
