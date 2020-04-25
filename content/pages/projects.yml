@@ -1,6 +1,15 @@
 ---
 title: projects
 projects:
+- title: Moon & Stars (single div)
+  description: A CSS animation of the Moon and stars created all packed into a single
+    div!
+  url: https://codepen.io/davejs/full/mdeWdaL
+  tags:
+  - animation
+  - css
+  - design
+  image: "../assets/moon-and-stars-preview.png"
 - title: Dartmouth Ferry
   url: https://ferry.davejs.dev/
   tags:
@@ -11,7 +20,7 @@ projects:
   description: CSS animation of the Dartmouth Ferry.
 - title: Jellyfish
   description: A CSS jellyfish animation.
-  url: https://codepen.io/davidleger95/full/MREodB
+  url: https://codepen.io/davejs/full/MREodB
   tags:
   - css
   - art
@@ -21,7 +30,7 @@ projects:
 - title: Manifold Taco Truck
   description: We love tacos at Manifold! So I created a 3D CSS animation of our taco
     truck with our CTO, James, inside. Hover over the door to see him come out!
-  url: https://codepen.io/davidleger95/full/QPKGNZ
+  url: https://codepen.io/davejs/full/QPKGNZ
   tags:
   - css
   - art
