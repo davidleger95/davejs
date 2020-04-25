@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title, type, canonicalUrl }) {
   const { site } = useStaticQuery(
@@ -24,12 +24,12 @@ function SEO({ description, lang, meta, title, type, canonicalUrl }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
   const canonicalLink = canonicalUrl
-    ? [{ rel: "canonical", href: canonicalUrl }]
-    : []
+    ? [{ rel: 'canonical', href: canonicalUrl }]
+    : [];
   return (
     <Helmet
       htmlAttributes={{
@@ -54,7 +54,7 @@ function SEO({ description, lang, meta, title, type, canonicalUrl }) {
         },
         {
           property: `og:type`,
-          content: type || "website",
+          content: type || 'website',
         },
         {
           name: `twitter:card`,
@@ -73,21 +73,26 @@ function SEO({ description, lang, meta, title, type, canonicalUrl }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
-  )
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
