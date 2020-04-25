@@ -42,6 +42,10 @@ body {
   outline-color: var(--primary-color);
 }
 
+::selection {
+  background-color: var(--primary-color);
+}
+
 button {
   appearance: none;
 }
