@@ -3,4 +3,6 @@
 # Redirect default Netlify subdomain to primary domain
 http://davejs.netlify.com/*   https://davejs.dev/:splat 301!
 https://davejs.netlify.com/*  https://davejs.dev/:splat 301!
+http://davejs.netlify.app/*   https://davejs.dev/:splat 301!
+https://davejs.netlify.app/*  https://davejs.dev/:splat 301!
 /projects                     /experiments
