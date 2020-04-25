@@ -26,10 +26,9 @@ const StyledToggle = styled.button`
     display: block;
     width: inherit;
     height: 0.5em;
-    background: white;
+    background-color: #fff8;
     border-radius: 1em;
     transform: translate(0, -50%);
-    opacity: 50%;
     transition: transform 100ms ease-in-out;
     content: '';
   }
@@ -38,10 +37,10 @@ const StyledToggle = styled.button`
     --moon: #0004;
     width: 1.25em;
     height: 1.25em;
+    background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 8px -4px var(--text-color), inset 0 0 0 4px #fff,
       inset -4px -2px 0 5px var(--moon);
-    opacity: 1;
   }
 
   &[aria-checked='true']::after {
