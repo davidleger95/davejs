@@ -8,10 +8,10 @@ const ToggleWrapper = styled.div`
   z-index: 999999;
   grid-column: 1 / -1;
   justify-self: end;
-  padding: 1.25rem 1rem;
+  padding: 1rem 1.5rem;
 
   @media (max-width: 700px) {
-    position: relative;
+    position: absolute;
   }
 `;
 

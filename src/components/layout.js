@@ -13,7 +13,12 @@ const Container = styled.div`
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr minmax(auto, 640px) 1fr;
   min-height: 100vh;
+  padding-top: 6rem;
   column-gap: 1rem;
+
+  @media (max-width: 700px) {
+    padding-top: 4rem;
+  }
 `;
 
 const Footer = styled.footer`
@@ -26,7 +31,7 @@ const Footer = styled.footer`
   background-color: var(--dark);
 
   @media (max-width: 700px) {
-    margin-bottom: 4.5rem;
+    padding-bottom: 5.5rem;
   }
 `;
 

@@ -18,13 +18,13 @@ const pages = [
 ];
 
 const NavbarContainer = styled.div`
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 99999;
   grid-column: 1 / -1;
-  padding: 1rem;
+  padding: 0.75rem 1.25rem;
   color: white;
   background: #001c;
   box-shadow: 0 0 1rem -0.75rem #0008;
@@ -34,7 +34,7 @@ const NavbarContainer = styled.div`
     position: fixed;
     top: initial;
     bottom: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
   }
 `;
