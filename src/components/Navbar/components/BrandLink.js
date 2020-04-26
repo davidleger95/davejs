@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const useLogo = () => {
   const data = useStaticQuery(graphql`
     query LogoQuery {
-      logo: file(absolutePath: { regex: "/davejs-logo-white.png/" }) {
+      logo: file(absolutePath: { regex: "/davejs-logo.png/" }) {
         childImageSharp {
           fluid(maxHeight: 36) {
             ...GatsbyImageSharpFluid_withWebp

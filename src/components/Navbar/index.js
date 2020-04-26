@@ -32,7 +32,7 @@ const NavbarContainer = styled.div`
 
   @media (max-width: 700px) {
     position: fixed;
-    top: auto;
+    top: initial;
     bottom: 0;
     padding: 0.5rem 1rem;
     padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
