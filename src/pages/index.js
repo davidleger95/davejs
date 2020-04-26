@@ -11,15 +11,26 @@ import LinkButton from '../components/styled/LinkButton';
 import { List, BlogPost } from './blog';
 import ContactForm from '../components/ContactForm';
 
-const Container = styled.main`
+const Container = styled.header`
   display: grid;
-  grid-gap: 1.5rem;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr auto;
+  gap: 1.75rem;
   align-items: center;
   margin: 15vh 0;
 
+  .image {
+    width: 150px;
+    height: auto;
+  }
+
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .image {
+      width: calc(100px + 15vw);
+      margin-bottom: 2rem;
+    }
   }
 `;
 
@@ -100,7 +111,11 @@ const HomePage = ({ data, location }) => {
       <SEO />
       <Container>
         <Lead>{lead}</Lead>
-        <Image fixed={data.avatar.childImageSharp.fixed} alt="David Leger" />
+        <Image
+          className="image"
+          fluid={data.avatar.childImageSharp.fluid}
+          alt="David Leger"
+        />
       </Container>
       <hr />
       <Section>
@@ -198,8 +213,8 @@ export const pageQuery = graphql`
     }
     avatar: file(absolutePath: { regex: "/davejs-profile.png/" }) {
       childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
