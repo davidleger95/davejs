@@ -34,7 +34,8 @@ const NavbarContainer = styled.div`
     position: fixed;
     top: auto;
     bottom: 0;
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
+    padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
   }
 `;
 

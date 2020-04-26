@@ -78,6 +78,7 @@ function SEO({ description, lang, meta, title, type, canonicalUrl }) {
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet"
       />
+      <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
     </Helmet>
   );
 }
