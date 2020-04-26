@@ -1,17 +1,15 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
 
-import { TagList, Tag } from "../../components/styled/Tag"
+import { TagList, Tag } from '../../components/styled/Tag';
 
-import Bio from "../../components/bio"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Bio from '../../components/bio';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 
-const Section = styled.section`
-  margin: 5vh 0;
-`
+const Section = styled.section``;
 
 export const List = styled.div`
   display: grid;
@@ -19,7 +17,7 @@ export const List = styled.div`
   margin: 0;
   padding: 0;
   list-style: none;
-`
+`;
 
 const LinkBlock = styled(Link)`
   text-decoration: none;
@@ -33,47 +31,51 @@ const LinkBlock = styled(Link)`
   &:hover {
     transform: scale(1.025);
   }
-`
-
-const Post = styled.article`
-  display: grid;
-  grid-gap: 1rem;
-
-  @media (min-width: 550px) {
-    grid-gap: 0.5rem 2rem;
-    grid-template-rows: repeat(auto-fill, auto);
-    grid-template-columns: ${props => (props.featured ? "1fr" : "16rem 1fr")};
-    justify-items: start;
-  }
-`
+`;
 
 const HeroImage = styled(Image)`
   grid-row: 1 / span 4;
   width: 100%;
-  height: 30vw;
   object-fit: cover;
+`;
+
+const Post = styled.article`
+  display: grid;
+  gap: 1rem;
 
   @media (min-width: 550px) {
-    height: 9rem;
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-template-columns: ${props => (props.featured ? '1fr' : '13rem 1fr')};
+    gap: 0.5rem 1rem;
+    justify-items: start;
   }
-`
+
+  ${HeroImage} {
+    height: ${props => (props.featured ? 'auto' : '7rem')};
+
+    @media (max-width: 550px) {
+      height: auto;
+      min-height: 12rem;
+    }
+  }
+`;
 
 const Title = styled.h3`
   margin: 0;
-`
+`;
 const StyledDate = styled.small`
   font-size: 0.8em;
   opacity: 0.75;
-`
+`;
 const Excerpt = styled.p`
   font-size: 1em;
   opacity: 0.75;
-`
+`;
 
 export const BlogPost = ({ node, i }) => {
-  const title = node.frontmatter.title || node.fields.slug
+  const title = node.frontmatter.title || node.fields.slug;
 
-  const image = node.frontmatter.heroImage.img
+  const image = node.frontmatter.heroImage.img;
   return (
     <LinkBlock to={node.fields.slug}>
       <Post key={node.fields.slug} featured={i === 0}>
@@ -96,12 +98,12 @@ export const BlogPost = ({ node, i }) => {
         )}
       </Post>
     </LinkBlock>
-  )
-}
+  );
+};
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -116,10 +118,10 @@ const BlogIndex = ({ data, location }) => {
         </List>
       </Section>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -159,4 +161,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

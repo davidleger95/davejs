@@ -6,9 +6,7 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import { TagList, Tag } from '../../components/styled/Tag';
 
-const Section = styled.section`
-  margin: 5vh 0;
-`;
+const Section = styled.section``;
 
 const ProjectList = styled.ul`
   display: grid;
@@ -24,7 +22,7 @@ const Project = styled.li`
   align-items: start;
 
   @media (min-width: 550px) {
-    grid-gap: 0.5rem 2rem;
+    grid-gap: 0.5rem 1.5rem;
     grid-template-rows: repeat(auto-fill, auto);
     grid-template-columns: 16rem 1fr;
     justify-items: start;
@@ -60,12 +58,8 @@ const CTA = styled.a.attrs({ rel: 'noopener noreferrer', target: '_blank' })`
 const ImageContainer = styled.div`
   grid-row: 1 / span 4;
   align-self: start;
-  height: 50vw;
+  height: auto;
   border-radius: 0.5rem;
-
-  @media (min-width: 550px) {
-    height: 9rem;
-  }
 `;
 const Thumbnail = styled.img`
   width: 100%;
