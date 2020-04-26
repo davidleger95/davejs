@@ -63,7 +63,7 @@ const Navbar = () => {
         <Nav>
           <BrandLink />
           {pages.map(({ name, path, icon }) => (
-            <NavLink to={path} icon={icon}>
+            <NavLink to={path} icon={icon} key={path}>
               {name}
             </NavLink>
           ))}

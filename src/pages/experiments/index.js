@@ -81,7 +81,10 @@ const HomePage = ({ data, location }) => {
       <SEO />
       <Section>
         <h1>
-          <span role="img">🧪</span> Experiments
+          <span role="img" aria-label="">
+            🧪
+          </span>{' '}
+          Experiments
         </h1>
         <hr />
         <ProjectList>

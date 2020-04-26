@@ -1,14 +1,14 @@
-import React from "react"
-import styled, { css } from "styled-components"
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 const Form = styled.form`
   display: grid;
   grid-gap: 1.5rem;
-`
+`;
 const Field = styled.div`
   display: grid;
   grid-gap: 0.5rem;
-`
+`;
 const Input = css`
   padding: 1.25rem;
   color: inherit;
@@ -21,16 +21,16 @@ const Input = css`
   &::placeholder {
     font-style: italic;
   }
-`
+`;
 
 const Textbox = styled.input`
   ${Input}
-`
+`;
 
 const Textarea = styled.textarea`
   ${Input}
   resize: none;
-`
+`;
 
 const Button = styled.button`
   justify-self: start;
@@ -48,19 +48,19 @@ const Button = styled.button`
   &:hover {
     transform: scale(1.05);
   }
-`
+`;
 
 export default class ContactForm extends React.Component {
   constructor(props) {
-    super(props)
-    this.submitForm = this.submitForm.bind(this)
+    super(props);
+    this.submitForm = this.submitForm.bind(this);
     this.state = {
-      status: "",
-    }
+      status: '',
+    };
   }
 
   render() {
-    const { status } = this.state
+    const { status } = this.state;
     return (
       <Form
         onSubmit={this.submitForm}
@@ -68,12 +68,18 @@ export default class ContactForm extends React.Component {
         method="POST"
       >
         <Field>
-          <label>Name</label>
-          <Textbox type="text" name="name" placeholder="First Last" />
+          <label htmlFor="contact-name">Name</label>
+          <Textbox
+            id="contact-name"
+            type="text"
+            name="name"
+            placeholder="First Last"
+          />
         </Field>
         <Field>
-          <label>Email *</label>
+          <label htmlFor="contact-email">Email *</label>
           <Textbox
+            id="contact-email"
             type="email"
             name="email"
             placeholder="hello@fakedoors.com"
@@ -81,8 +87,9 @@ export default class ContactForm extends React.Component {
           />
         </Field>
         <Field>
-          <label>Message *</label>
+          <label htmlFor="contact-message">Message *</label>
           <Textarea
+            id="contact-message"
             type="text"
             name="message"
             placeholder="What's up?"
@@ -90,32 +97,32 @@ export default class ContactForm extends React.Component {
             required
           />
         </Field>
-        {status === "SUCCESS" ? (
+        {status === 'SUCCESS' ? (
           <p>Thanks!</p>
         ) : (
           <Button type="submit">Submit</Button>
         )}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        {status === 'ERROR' && <p>Ooops! There was an error.</p>}
       </Form>
-    )
+    );
   }
 
   submitForm(ev) {
-    ev.preventDefault()
-    const form = ev.target
-    const data = new FormData(form)
-    const xhr = new XMLHttpRequest()
-    xhr.open(form.method, form.action)
-    xhr.setRequestHeader("Accept", "application/json")
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
     xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
-        form.reset()
-        this.setState({ status: "SUCCESS" })
+        form.reset();
+        this.setState({ status: 'SUCCESS' });
       } else {
-        this.setState({ status: "ERROR" })
+        this.setState({ status: 'ERROR' });
       }
-    }
-    xhr.send(data)
+    };
+    xhr.send(data);
   }
 }
