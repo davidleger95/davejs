@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+const ToggleWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  grid-column: 1 / -1;
+  justify-self: end;
+  padding: 1.25rem 1rem;
+
+  @media (max-width: 700px) {
+    position: relative;
+  }
+`;
+
 const StyledToggle = styled.button`
   position: relative;
-  justify-self: end;
   width: 2.25em;
-  padding: 0;
+  height: max-content;
+  padding: 0.75em 0;
   font-size: 1.25rem;
   background: transparent;
   border: none;
@@ -57,20 +71,22 @@ const ThemeToggle = () => {
   const [value, setValue] = useState(defaultValue);
 
   return (
-    <StyledToggle
-      type="button"
-      role="toggle"
-      aria-checked={value}
-      aria-label="Theme Switcher"
-      onClick={() => {
-        setValue(oldValue => !oldValue);
-        document.body.setAttribute(
-          'data-color-scheme',
-          !value ? 'dark' : 'light'
-        );
-        localStorage.setItem('color-scheme', !value ? 'dark' : 'light');
-      }}
-    />
+    <ToggleWrapper>
+      <StyledToggle
+        type="button"
+        role="toggle"
+        aria-checked={value}
+        aria-label="Theme Switcher"
+        onClick={() => {
+          setValue(oldValue => !oldValue);
+          document.body.setAttribute(
+            'data-color-scheme',
+            !value ? 'dark' : 'light'
+          );
+          localStorage.setItem('color-scheme', !value ? 'dark' : 'light');
+        }}
+      />
+    </ToggleWrapper>
   );
 };
 

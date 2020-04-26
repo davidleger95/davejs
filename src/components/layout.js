@@ -1,11 +1,8 @@
 import React from 'react';
-import { useStaticQuery, Link } from 'gatsby';
-import Image from 'gatsby-image';
 import styled from 'styled-components';
-import StyledLink from './styled/Link';
+import Navbar from './Navbar';
 
 import '../global.css';
-import ThemeToggle from './ThemeToggle';
 
 const Container = styled.div`
   display: grid;
@@ -19,92 +16,28 @@ const Container = styled.div`
   column-gap: 1rem;
 `;
 
-const Header = styled.header`
-  display: grid;
-  grid-area: header;
-  grid-template-columns: 1fr auto;
-  justify-items: start;
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
-  padding: 0 1rem;
-`;
-
-const Nav = styled.nav`
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 1rem;
-  align-items: center;
-  justify-content: start;
-`;
-
 const Footer = styled.footer`
   grid-area: footer;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   color: var(--gray);
   font-size: 0.8rem;
   text-align: center;
   background-color: var(--dark);
+
+  @media (max-width: 700px) {
+    margin-bottom: 4.5rem;
+  }
 `;
 
 const Content = styled.main`
   grid-area: content;
 `;
 
-const Layout = ({ title, children }) => {
-  const data = useStaticQuery(graphql`
-    query NavQuery {
-      logoLight: file(absolutePath: { regex: "/davejs-logo-dark.png/" }) {
-        childImageSharp {
-          fixed(height: 42) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-      logoDark: file(absolutePath: { regex: "/davejs-logo-white.png/" }) {
-        childImageSharp {
-          fixed(height: 42) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `);
-
-  const header = (
-    <h1>
-      <Link to={`/`}>
-        {/* HACK: swap out logo for light/dark theme */}
-        <picture data-theme="light">
-          <Image fixed={data.logoLight.childImageSharp.fixed} alt={title} />
-        </picture>
-        <picture data-theme="dark">
-          <Image fixed={data.logoDark.childImageSharp.fixed} alt={title} />
-        </picture>
-      </Link>
-    </h1>
-  );
+const Layout = ({ children }) => {
   return (
     <Container>
-      <Header>
-        <Nav>
-          {header}
-          <StyledLink to="/experiments">
-            <span role="img" aria-label="">
-              🧪
-            </span>
-            <span class="text">Experiments</span>
-          </StyledLink>
-          <StyledLink to="/blog">
-            <span role="img" aria-label="">
-              ✏️
-            </span>
-            <span class="text">Blog</span>
-          </StyledLink>
-        </Nav>
-        <ThemeToggle />
-      </Header>
+      <Navbar />
       <Content>{children}</Content>
       <Footer>(c) {new Date().getFullYear()}, David Leger</Footer>
     </Container>
