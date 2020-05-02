@@ -1,12 +1,12 @@
 ---
 draft: false
-date: 2019-11-18T22:54:21Z
+date: 2019-11-18T22:54:21.000+00:00
 tags:
 - opinion
 - startups
 - manifold
 title: Job Security in Startup-land
-description: Why working for a startup is not be as risky as it might seem.
+description: Why working for a startup may not be as risky as it might seem.
 heroImage:
   img: "../assets/manifold-office.jpg"
   alt: The Manifold office
