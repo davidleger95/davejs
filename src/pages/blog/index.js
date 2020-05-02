@@ -109,6 +109,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Blog" />
       <Bio />
+      <hr />
       <Section>
         <h2>Latest Posts</h2>
         <List>
