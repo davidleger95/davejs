@@ -151,9 +151,8 @@ const CrossPost = ({ originName, canonicalUrl }) => (
   </Toast>
 );
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   const { crossPost } = post.frontmatter;
