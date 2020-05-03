@@ -11,7 +11,7 @@ description: Schema.org is an open standard for describing rich HTML content. It
 heroImage:
   img: "../assets/schema.org-cover.png"
   alt: schema.org
-shareImage: ''
+shareImage: "../assets/schema.org-cover.png"
 
 ---
 [Schema.org](https://schema.org) was an _unknown unknown_ to me for most of my time as a frontend developer. I have been building websites since 2010 and it was just over a year ago when I started at Manifold that I learned about its existence. Even as someone who keeps up with modern web development trends, Schema.org flew under my radar for far too long.  Why?
