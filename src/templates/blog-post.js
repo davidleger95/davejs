@@ -195,8 +195,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <Header>
           {post.frontmatter.heroImage && (
-            <HeroImage itemProp="image">
+            <HeroImage>
               <Image
+                itemProp="image"
                 fluid={post.frontmatter.heroImage.img.src.fluid}
                 alt={post.frontmatter.heroImage.alt}
               />
