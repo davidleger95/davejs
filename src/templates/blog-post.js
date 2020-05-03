@@ -1,31 +1,31 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from "styled-components"
-import { TagList, Tag } from "../components/styled/Tag"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import IconLaunch from "@material-ui/icons/Launch"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
+import { TagList, Tag } from '../components/styled/Tag';
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import IconLaunch from '@material-ui/icons/Launch';
 
 const Header = styled.header`
   display: grid;
   grid-gap: 1rem;
   margin-bottom: 2rem;
-`
+`;
 
 const HeroImage = styled.div`
   display: grid;
-`
+`;
 
 const Title = styled.h1`
   margin: 0;
   font-size: 1.75rem;
-`
+`;
 
 const StyledDate = styled.small`
   opacity: 0.75;
-`
+`;
 
 const Content = styled.div`
   p,
@@ -66,14 +66,14 @@ const Content = styled.div`
     font-family: Roboto, sans-serif;
     border: 1px solid #8888;
   }
-`
+`;
 
 const BottomNav = styled.nav`
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 2.5rem;
-`
+`;
 
 const NavLink = styled(Link)`
   display: grid;
@@ -96,7 +96,7 @@ const NavLink = styled(Link)`
   &:hover {
     transform: scale(1.025);
   }
-`
+`;
 
 const Toast = styled.div`
   position: relative;
@@ -111,10 +111,10 @@ const Toast = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
     background-color: var(--text-color);
     opacity: 0.1;
-    content: "";
+    content: '';
+    pointer-events: none;
   }
 
   p {
@@ -133,28 +133,28 @@ const Toast = styled.div`
       text-decoration: underline;
     }
   }
-`
+`;
 
 const CrossPost = ({ originName, canonicalUrl }) => (
   <Toast>
-    <p>
-      Cross-posted from {originName}.{" "}
+    <p itemProp="backstory">
+      Cross-posted from {originName}.{' '}
       <a href={canonicalUrl} target="_blank" rel="noopener noreferrer">
         <span>See the original post here.</span> <IconLaunch />
       </a>
     </p>
   </Toast>
-)
+);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
 
-  const { crossPost } = post.frontmatter
+  const { crossPost } = post.frontmatter;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={`${post.frontmatter.title} by David Leger`}
         description={post.frontmatter.description || post.excerpt}
@@ -164,41 +164,41 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           ...(post.tags
             ? [
                 {
-                  property: "keywords",
-                  content: post.tags.join(","),
+                  property: 'keywords',
+                  content: post.tags.join(','),
                 },
               ]
             : []),
           {
-            property: "og:image",
+            property: 'og:image',
             content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
           },
           {
-            property: "og:url",
+            property: 'og:url',
             content: `https://davejs.dev${post.fields.slug}`,
           },
           {
-            property: "twitter:image",
+            property: 'twitter:image',
             content: `https://davejs.dev${post.frontmatter.shareImage.src.fixed.src}`,
           },
         ]}
       />
-      <article>
+      <article itemScope="https://schema.org/BlogPosting" itemProp="blogPost">
         <Header>
           {post.frontmatter.heroImage && (
-            <HeroImage>
+            <HeroImage itemProp="image">
               <Image
                 fluid={post.frontmatter.heroImage.img.src.fluid}
                 alt={post.frontmatter.heroImage.alt}
               />
             </HeroImage>
           )}
-          <StyledDate>
+          <StyledDate itemProp="dateCreated">
             {post.frontmatter.date} &bull; {post.timeToRead} min.
           </StyledDate>
-          <Title>{post.frontmatter.title}</Title>
+          <Title itemProp="headline">{post.frontmatter.title}</Title>
           {post.frontmatter.tags && (
-            <TagList>
+            <TagList itemProp="keywords">
               {post.frontmatter.tags.map(tag => (
                 <Tag key={tag}>{tag}</Tag>
               ))}
@@ -206,7 +206,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           )}
         </Header>
         {crossPost && <CrossPost {...crossPost} />}
-        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Content
+          itemProp="articleBody"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr />
         <footer>
           <Bio />
@@ -232,10 +235,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </BottomNav>
       )}
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -282,4 +285,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

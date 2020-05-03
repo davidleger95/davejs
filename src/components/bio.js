@@ -57,9 +57,9 @@ const Bio = () => {
   return (
     <Container>
       <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
-      <div>
-        <h3>{author}</h3>
-        <p>
+      <div itemScope itemProp="author" itemType="https://schema.org/Person">
+        <h3 itemProp="name">{author}</h3>
+        <p itemProp="description">
           I’m an artsy software engineer living in Halifax, Canada. Enjoy my hot
           takes{' '}
           <span role="img" aria-label="fire">

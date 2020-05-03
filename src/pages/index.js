@@ -108,7 +108,7 @@ const HomePage = ({ data, location }) => {
   const { projects } = data.projects;
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO />
       <Container>
         <Lead>{lead}</Lead>

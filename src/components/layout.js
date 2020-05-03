@@ -39,11 +39,11 @@ const Content = styled.main`
   grid-area: content;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, ...props }) => {
   return (
     <Container>
       <Navbar />
-      <Content>{children}</Content>
+      <Content {...props}>{children}</Content>
       <Footer>(c) {new Date().getFullYear()}, David Leger</Footer>
     </Container>
   );

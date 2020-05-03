@@ -77,20 +77,26 @@ export const BlogPost = ({ node, i }) => {
 
   const image = node.frontmatter.heroImage.img;
   return (
-    <LinkBlock to={node.fields.slug}>
+    <LinkBlock
+      to={node.fields.slug}
+      itemScope
+      itemProp="blogPost"
+      itemType="https://schema.org/BlogPosting"
+    >
       <Post key={node.fields.slug} featured={i === 0}>
-        <HeroImage {...image.childImageSharp} />
-        <StyledDate>
+        <HeroImage itemProp="image" {...image.childImageSharp} />
+        <StyledDate itemProp="dateCreated">
           {node.frontmatter.date} &bull; {node.timeToRead} min.
         </StyledDate>
-        <Title>{title}</Title>
+        <Title itemProp="headline">{title}</Title>
         <Excerpt
+          itemProp="abstract"
           dangerouslySetInnerHTML={{
             __html: node.frontmatter.description || node.excerpt,
           }}
         />
         {node.frontmatter.tags && (
-          <TagList>
+          <TagList itemProp="keywords">
             {node.frontmatter.tags.map(tag => (
               <Tag key={tag}>{tag}</Tag>
             ))}
@@ -101,12 +107,11 @@ export const BlogPost = ({ node, i }) => {
   );
 };
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
+const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout itemScope itemType="https://schema.org/Blog">
       <SEO title="Blog" />
       <Bio />
       <hr />

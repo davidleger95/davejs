@@ -67,11 +67,11 @@ const Thumbnail = styled.img`
   object-fit: cover;
 `;
 
-const HomePage = ({ data, location }) => {
+const HomePage = ({ data }) => {
   const { projects } = data.page;
 
   return (
-    <Layout location={location}>
+    <Layout>
       <SEO />
       <Section>
         <h1>
