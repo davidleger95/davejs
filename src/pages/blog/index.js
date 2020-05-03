@@ -21,6 +21,7 @@ export const List = styled.div`
 
 const LinkBlock = styled(Link)`
   text-decoration: none;
+  transition: transform 100ms ease-in-out;
 
   p {
     align-self: start;
@@ -85,8 +86,9 @@ export const BlogPost = ({ node, i }) => {
     >
       <Post key={node.fields.slug} featured={i === 0}>
         <HeroImage itemProp="image" {...image.childImageSharp} />
-        <StyledDate itemProp="dateCreated">
-          {node.frontmatter.date} &bull; {node.timeToRead} min.
+        <StyledDate>
+          <span itemProp="datePublished">{node.frontmatter.date}</span> &bull;{' '}
+          {node.timeToRead} min.
         </StyledDate>
         <Title itemProp="headline">{title}</Title>
         <Excerpt

@@ -139,7 +139,12 @@ const CrossPost = ({ originName, canonicalUrl }) => (
   <Toast>
     <p itemProp="backstory">
       Cross-posted from {originName}.{' '}
-      <a href={canonicalUrl} target="_blank" rel="noopener noreferrer">
+      <a
+        href={canonicalUrl}
+        itemProp="url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <span>See the original post here.</span> <IconLaunch />
       </a>
     </p>
@@ -183,7 +188,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           },
         ]}
       />
-      <article itemScope="https://schema.org/BlogPosting" itemProp="blogPost">
+      <article
+        itemScope
+        itemType="https://schema.org/BlogPosting"
+        itemProp="blogPost"
+      >
         <Header>
           {post.frontmatter.heroImage && (
             <HeroImage itemProp="image">
@@ -193,8 +202,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               />
             </HeroImage>
           )}
-          <StyledDate itemProp="dateCreated">
-            {post.frontmatter.date} &bull; {post.timeToRead} min.
+          <StyledDate>
+            <span itemProp="datePublished">{post.frontmatter.date}</span> &bull;{' '}
+            {post.timeToRead} min.
           </StyledDate>
           <Title itemProp="headline">{post.frontmatter.title}</Title>
           {post.frontmatter.tags && (
