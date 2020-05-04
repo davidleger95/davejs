@@ -1,5 +1,5 @@
 ---
-date: 2019-11-29T00:42:09Z
+date: 2019-11-29T00:42:09.000+00:00
 tags:
 - tutorial
 - css
@@ -96,7 +96,7 @@ a {
 
 It works! 😁  Now the navigation links inherit `color` from from `nav` and links elsewhere on the page inherit `color` and `text-decoration` from their parent elements as well. This makes our styles a lot more flexible by allowing links to inherit styles from their context. If a link is inside a success message, the text might be green, so the link will also be green. The same goes for error and warning messages.
 
-**There are so many different contexts where property values are dependant on their context, and** `**inherit**` **gives us an easy way to get the behavior we want without writing redundant code.**
+**There are so many different contexts where property values are dependant on their context, and** `inherit` **gives us an easy way to get the behavior we want without writing redundant code.**
 
 Another example is the `button` element, which has a default font size smaller than plain text and is explicitly colored black. We can use `inherit` to quickly normalize the button font with its surroundings:
 
