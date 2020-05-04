@@ -5,7 +5,7 @@ tags:
 - html
 - seo
 draft: false
-title: " Schema.org: The Most Popular Web Standard You’ve Never Heard Of \U0001F92B"
+title: " Schema.org: The Popular Web Standard You’ve Never Heard Of \U0001F92B"
 description: Schema.org is an open standard for describing rich HTML content. It can
   help you improve your website's SEO and search engine preview links.
 heroImage:
@@ -30,19 +30,21 @@ So what the heck is it? According to the [Schema.org homepage](https://schema.or
 
 > Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
 
-In basic terms: Schema.org helps identify what web content actually means. It builds on the concepts of [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML "MDN - Semantics in HTML") and gives richer meaning to web content.
+In basic terms: Schema.org helps give meaning to web content. It builds on the concepts of [semantic HTML elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML "MDN - Semantics in HTML") and gives richer meaning to web content.
 
-Just like semantic HTML, Schema.org is great for search engine optimization (SEO). By giving more context to your content, search engines can better parse and categorize your content, making it easier for people to find it. Search engines can even use this structured data to create rich previews.
+Just like semantic HTML, Schema.org helps with search engine optimization (SEO). By giving more context to your content, search engines can better parse and categorize your content, making it easier for people to find. Search engines can even use this structured data to create rich previews.
 
 ![A Google Search rich preview for ‘Avengers: Endgame’ which shows the film’s rating](../assets/Screen Shot 2020-05-03 at 6.25.36 PM.png)
 
-In the preview for Avengers: Endgame, we see rating data has been added to the listing. This is because IMDb has properly tagged their content using Schema.org standards.
+In this preview for _Avengers: Endgame_ on IMDb we see rating data has been added to the search result. This is because IMDb has properly tagged the content using Schema.org.
 
 Another way to think of Schema.org is it’s like [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA "MDN - Web Accessibility, ARIA"), but for SEO instead of accessibility. It doesn’t change the functionality of your website but enhances it for a specific audience (in this case, that audience is search engines).
 
+***
+
 ## Adding Schema.org to HTML Content
 
-Schema.org has standards for several encodings, however, the most likely one you’ll use is _Microdata_, which allows you to directly tag HTML with schema data via HTML attributes.
+Schema.org supports several encodings, however, the most common one used is _Microdata_, which allows us to directly tag markup with schema data via HTML attributes.
 
 The API is quite simple. There are just three attributes:
 
@@ -71,9 +73,11 @@ Here’s a simple example using the [Person Type](https://schema.org/Person "Sch
 </div>
 ```
 
-The `itemscope` and `itemtype` are placed on the top-level `<div>` so that every `itemprop` enclosed belongs to the Person type.
+The `itemscope` and `itemtype` are set on the top-level `<div>` so that every `itemprop` within it belongs to the Person type.
 
-Notice how `description` wraps two additional `itemprop`s. Regardless of the level, `itemprops`s will apply to the closes ancestor with an `itemscope`. We can also define multiple of the same `itemprop` as shown with `knowsAbout`.
+The `itemtype` value is simply the URL of the documentation for the type you want to use. In order to know which `itemtype` and `itemprop` values best fit your content, you can research the Schema.org docs which have detailed descriptions and examples for how each schema type should be used.
+
+Notice how `description` wraps two additional `itemprop`s. Regardless of the level, `itemprops`s will be associated with the closest ancestor `itemscope`. We can also define multiple instances of the same `itemprop` as shown with `knowsAbout`.
 
 ### Nested Items
 
@@ -100,13 +104,13 @@ What if we want to nest items within an item though? For that, we can define a n
 </div>
 ```
 
-By adding `itemscope` to the `<address>` element, we are scoping all the `itemprop`s within that tag to the PostalAddress item. The PostalAddress is linked to the Person item by using `itemprop="address"`, without which they would be interpreted as completely separate entities.
+By adding `itemscope` to the `<address>` element, we are scoping all the `itemprop`s within that tag to the PostalAddress item. The PostalAddress is linked to the Person item by using `itemprop="address"`, without which they would be interpreted as separate, unassociated items.
 
 ### Hidden Data
 
-Sometimes we want to give context to search engines that we don’t necessarily want to display on the page. This can be done using `<meta>` tags. This might seem a bit strange since `<meta>` tags are usually found in the `<head>` of a web page, but [Schema.org recommends using meta tags for implicit content](https://schema.org/docs/gs.html#advanced_missing "Schema.org - Getting started: missing content").
+Sometimes we want to give context to search engines that we don’t necessarily want to display on the page. This can be achieved by using `<meta>` tags. This might seem a bit strange since `<meta>` tags are usually found in the `<head>` of a web page, but [Schema.org recommends using meta tags for implicit content](https://schema.org/docs/gs.html#advanced_missing "Schema.org - Getting started: missing content").
 
-For the Person item, let’s add my nickname (dave.js) using a meta tag:
+For the Person item, let’s add my nickname (dave.js) using a `<meta>` tag:
 
 ```html
 <div itemscope itemtype="https://schema.org/Person">
@@ -128,13 +132,17 @@ For the Person item, let’s add my nickname (dave.js) using a meta tag:
 </div>
 ```
 
+***
+
 ## Testing Schema.org Items
 
-Testing out your items is simple. Google offers a [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to validate your items. It parses your HTML and shows a tree of how the item attributes are interpreted. It also shows errors and warnings for missing properties that are required or recommended for each `itemtype`
+Testing out your items is simple. Google offers a [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) to validate your items. It parses your HTML and shows a tree of how the item attributes are interpreted. It also shows errors and warnings for missing properties that are required or recommended for each `itemtype`.
 
 Here’s our example parsed with the Structured Data Testing Tool.
 
 ![A dashboard with HTML code on the left and a tree of parsed item data on the right.](../assets/Screen Shot 2020-05-03 at 5.44.11 PM.png)
+
+***
 
 ## A Living Standard
 
