@@ -5,8 +5,8 @@ tags:
 - " tutorial"
 draft: false
 title: Some Arbitrary Number of Lesser-Known GraphQL Features
-description: Exploring some lesser-known GraphQL including fragments, field aliases,
-  and default variables.
+description: Exploring some lesser-known GraphQL features including fragments, field
+  aliases, and default variables.
 heroImage:
   img: "../assets/graphql-feature-banner.png"
   alt: lesser-known GraphQL features
