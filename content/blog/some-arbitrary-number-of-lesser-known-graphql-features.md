@@ -13,9 +13,9 @@ heroImage:
 shareImage: ''
 
 ---
-Every time you turn your head some new web technology sponateously spawns into existance. It seemed like just yesterday, GraphQL was one of them. In reality, GraphQL has been out in the wild for about five years. Oh how the precious years escape us...
+Every time you turn your head some new web technology spontaneously spawns into existence. It seemed like just yesterday, GraphQL was one of them. In reality, GraphQL has been out in the wild for about five years. Oh how the precious years escape us...
 
-Despite it being relatively old news, it's still quite new to the vast majority of software developers. If you're one of those developers, just dipping your toes into the pond of GraphQL -- _RUN! IT's A TRAP!_ Nah, just kidding. GraphQL is great! Hope I didn't scare you away. 
+Despite it being relatively old news, it's still quite new to the vast majority of software developers. If you're one of those developers, just dipping your toes into the pond of GraphQL -- _RUN! IT's A TRAP!_ Nah, just kidding. GraphQL is great! Hope I didn't scare you away.
 
 This list includes only client-side features so they're usable with any GraphQL endpoint. No special changes need to be made to the server for these to work. (Perhaps lesser-known GraphQL server features will be my next blog post.)
 
@@ -120,7 +120,7 @@ Notice that for fragments, we need to use `on [Type]` to specify which fields ar
 
 ## 3. Default Variables
 
-When writing your queries for use in an app, you'll typically want to pass variables into it so you can change the query at runtime. Just like default function paramaters in JavaScript, GraphQL can also take advantage of default values.
+When writing your queries for use in an app, you'll typically want to pass variables into it so you can change the query at runtime. Just like default function parameters in JavaScript, GraphQL can also take advantage of default values.
 
 Let's query a given rocket and set the default rocket to `"falconheavy"` because it's dope AF.
 
@@ -134,9 +134,7 @@ query Ship($rocketId: ID! = "falconheavy") {
     }
   }
 }
-
 ```
-
 
 ## Bonus: Variables Within Fragments
 
