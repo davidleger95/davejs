@@ -8,9 +8,9 @@ title: Some Arbitrary Number of Lesser-Known GraphQL Features
 description: Exploring some lesser-known GraphQL including fragments, field aliases,
   and default variables.
 heroImage:
-  img: ''
-  alt: ''
-shareImage: ''
+  img: "../assets/graphql-feature-banner.png"
+  alt: lesser-known GraphQL features
+shareImage: "../assets/graphql-features-1.png"
 
 ---
 Every time you turn your head some new web technology spontaneously spawns into existence. It seemed like just yesterday, GraphQL was one of them. In reality, GraphQL has been out in the wild for about five years. Oh how the precious years escape us...
@@ -122,7 +122,7 @@ Notice that for fragments, we need to use `on [Type]` to specify which fields ar
 
 When writing your queries for use in an app, you'll typically want to pass variables into it so you can change the query at runtime. Just like default function parameters in JavaScript, GraphQL can also take advantage of default values.
 
-Let's query a given rocket and set the default rocket to `"falconheavy"` because it's dope AF.
+Let's query a given rocket and set the default rocket to `"falconheavy"` because it's dope AF. 🚀 
 
 ```graphql
 query Ship($rocketId: ID! = "falconheavy") {
