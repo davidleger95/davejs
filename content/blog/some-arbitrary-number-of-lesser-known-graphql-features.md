@@ -93,7 +93,7 @@ which resolves to the following result:
 }
 ```
 
-## Fragments
+## 2. Fragments
 
 Fragments let you reuse common pieces of a query or mutation. To demonstrate this, we can refactor our last example to reuse the ship details.
 
