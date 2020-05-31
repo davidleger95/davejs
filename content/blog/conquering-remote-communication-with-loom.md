@@ -5,7 +5,7 @@ tags:
 - " remote"
 - loom
 draft: false
-title: Conquering Remote Communication with Loom
+title: "Conquering Remote Communication with Loom \U0001F9F5"
 description: Loom is a great tool for quick and easy remote knowledge sharing with
   video. This is how I started using Loom to communicate more effectively with my
   coworkers in different timezones.
@@ -19,7 +19,7 @@ In my last post I explained how [the biggest problem with remote work is not the
 
 Now that you’re all caught up, let’s dive into how I’ve been changing how I communicate to better suit a remote environment.
 
-## Experimenting with Loom for one month
+## Experimenting with Loom for one month 👨‍🔬
 
 Remote work is new to all of us. Even those of us who have done it for a while don’t have it all figured out. That means there’s plenty of opportunity for innovation in the processes surrounding remote work.
 
@@ -39,13 +39,23 @@ Over the past month, I’ve been conducting an experiment at work. Every time I�
 
 Loom is actually an essential piece of this solution. If you’re not familiar with it, Loom is an app that records your screen and webcam simultaneously and instantly lets you share it with anyone online. Without Loom, recording a video that includes both your face and screen and then sharing that with your team would be impossibly time-consuming and unsustainable. Loom makes it easy and effortless.
 
+Here's an example Loom where I give a tour of my website:
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/712fbe229d29455faa8c2640fde9447d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 So what were the results of my experiment? My coworkers love it! (🌮s are an expression of gratitude at our company)
 
-![Drew: taco emoji @dave.js big fan of the loom method](../assets/screen-shot-2020-05-27-at-10-48-28-pm.png)![James: Hey gang! Dave's navbar PR has two good looms for some explanation of using material ui](../assets/screen-shot-2020-05-27-at-10-51-10-pm.png)![Mark: Whoa, I also just started watching the loom. Don't want to spoil anything but wait until you see the twist in the second loom.](../assets/screen-shot-2020-05-27-at-10-51-43-pm.png)![Dave.js: In today's episode of the dave.js show: How to reuse GraphQL fragments across multiple files in out Web Components. (linked Loom video.) Drew: taco emoji taco emoji @dave.js subscribe. Sam: taco emoji taco emoji @dave.js (dreamweaver gif)](../assets/screen-shot-2020-05-27-at-10-50-34-pm.png)
+![Drew: taco emoji @dave.js big fan of the loom method](../assets/screen-shot-2020-05-27-at-10-48-28-pm.png)
+
+![James: Hey gang! Dave's navbar PR has two good looms for some explanation of using material ui](../assets/screen-shot-2020-05-27-at-10-51-10-pm.png)
+
+![Mark: Whoa, I also just started watching the loom. Don't want to spoil anything but wait until you see the twist in the second loom.](../assets/screen-shot-2020-05-27-at-10-51-43-pm.png)
+
+![Dave.js: In today's episode of the dave.js show: How to reuse GraphQL fragments across multiple files in out Web Components. (linked Loom video.) Drew: taco emoji taco emoji @dave.js subscribe. Sam: taco emoji taco emoji @dave.js (dreamweaver gif)](../assets/screen-shot-2020-05-27-at-10-50-34-pm.png)
 
 Loom is the perfect medium for remote knowledge sharing. It allows quick and easy, asynchronous, high throughput communication.
 
-## Is Writing Dead?
+## Is Writing Dead? 💀
 
 Don’t get me wrong, writing is great! I’m writing right now!
 
