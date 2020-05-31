@@ -1,9 +1,10 @@
 ---
-date: 2020-05-28T02:42:21Z
+date: 2020-06-01T02:42:21Z
 tags:
 - opinion
 - " remote"
 - loom
+- communication
 draft: false
 title: "Conquering Remote Communication with Loom \U0001F9F5"
 description: Loom is a great tool for quick and easy remote knowledge sharing with
