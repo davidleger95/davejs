@@ -3,6 +3,7 @@ date: 2020-05-26T02:22:41Z
 tags:
 - opinion
 - remote
+- communication
 draft: false
 title: The Real Problem with Remote Communication
 description: Zoom and Slack are reactionary remote work solutions that are reminiscent
@@ -32,18 +33,16 @@ However, the tradeoff is the time required for writing and reading; a far more l
 
 > We lose a lot of informational throughput with writing, compared with speaking face-to-face.
 
-Why is it so hard? We lose a lot of informational throughput with writing, compared with speaking face-to-face. We lose tone, emphasis, and body language — all of which help us communicate our ideas and intentions. When these important aspects of natural communication are stripped away, it’s simply harder to communicate effectively. **Writing lacks many of the tools we naturally use to communicate.** In this medium, we often struggle to connect. 
+Why is it so hard? We lose a lot of informational throughput with writing, compared with speaking face-to-face. We lose tone, emphasis, and body language — all of which help us communicate our ideas and intentions. When these important aspects of natural communication are stripped away, it’s simply harder to communicate effectively. **Writing lacks many of the tools we naturally use to communicate.** In this medium, we often struggle to connect.
 
 Hours upon hours are spent crafting big walls of text on Slack that are then misinterpreted only to have you re-explain your thoughts with subsequent walls of text, or writing up seven- eight-page Google Docs that no one ends up reading.
 
-More often than not, we’d be better off sharing this information in a meeting, right? But the scheduling issues I mentioned earlier often leave us no choice. 
+More often than not, we’d be better off sharing this information in a meeting, right? But the scheduling issues I mentioned earlier often leave us no choice.
 
 Once I had to schedule a 30-minute meeting where it took me literally hours to find a time that worked for everyone, and the time was two weeks away. Even then, two of eight people were unable to attend because their schedule changed.
 
 **Meetings are hard. They don’t work for distributed teams.** But neither does Slack when we're trying to share big, complex, nuanced ideas with our team. Is there a way we maintain the information throughput of video conferencing while also making it async-friendly like Slack discussions?
 
-Yes! 
+Yes!
 
-But what is it? Hold tight!
-
-In my next post I’ll be sharing how I adjusted my own process to overcome the challenges of remote communication.
+In my next post, I share \[how I use Loom to conquer remote communication\]([https://davejs.dev/conquering-remote-communication-with-loom/](https://davejs.dev/conquering-remote-communication-with-loom/ "Conquering Remote Communication with Loom")).
