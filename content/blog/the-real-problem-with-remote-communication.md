@@ -7,7 +7,7 @@ tags:
 draft: false
 title: The Real Problem with Remote Communication
 description: Zoom and Slack are reactionary remote work solutions that are reminiscent
-  of the good ol’ office life. They bridge the remote communication gap is a familiar
+  of the good ol’ office life. They bridge the remote communication gap in a familiar
   way, but are they effective?
 heroImage:
   img: "../assets/remote-work-cover.png"
@@ -15,7 +15,7 @@ heroImage:
 shareImage: "../assets/remote-work-social.png"
 
 ---
-When the COVID-19 pandemic hit, companies all over the world started scrambling to figure out how to work remotely. We’ve seen a huge uptick in the popularity of apps like Slack and Zoom. While these apps help immensely with remote work, they don’t change the way we work. Slack is essentially faster email, and Zoom is analogous to in-person meetings. **Zoom and Slack are reactionary remote work solutions that are reminiscent of the good ol’ office life.** They bridge the remote communication gap is a familiar way, but are they effective?
+When the COVID-19 pandemic hit, companies all over the world started scrambling to figure out how to work remotely. We’ve seen a huge uptick in the popularity of apps like Slack and Zoom. While these apps help immensely with remote work, they don’t change the way we work. Slack is essentially faster email, and Zoom is analogous to in-person meetings. **Zoom and Slack are reactionary remote work solutions that are reminiscent of the good ol’ office life.** They bridge the remote communication gap in a familiar way, but are they effective?
 
 I’ve worked on a distributed team for nearly my entire career as a software engineer. First, at Cvent where my team was scattered across the world. My team was primarily in India, with some team members in the United States, Russia, and Argentina. Meanwhile, I was based out of Atlantic Canada.
 
