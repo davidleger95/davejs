@@ -1,5 +1,5 @@
 ---
-date: 2020-05-26T02:22:41Z
+date: 2020-05-26T02:22:41.000+00:00
 tags:
 - opinion
 - remote
@@ -51,4 +51,4 @@ Once I had to schedule a 30-minute meeting where it took me literally hours to f
 
 _Yes!_
 
-In my next post, I share \[how I use Loom to conquer remote communication\]([https://davejs.dev/conquering-remote-communication-with-loom/](https://davejs.dev/conquering-remote-communication-with-loom/ "Conquering Remote Communication with Loom")).
+In my next post, I share [how I use Loom to conquer remote communication](https://davejs.dev/conquering-remote-communication-with-loom/).
