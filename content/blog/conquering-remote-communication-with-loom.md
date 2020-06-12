@@ -1,5 +1,5 @@
 ---
-date: 2020-06-01T02:42:21Z
+date: 2020-06-01T02:42:21.000+00:00
 tags:
 - opinion
 - " remote"
@@ -24,7 +24,7 @@ Now that you’re all caught up, let’s dive into how I’ve been changing how 
 
 > Writing is horrendously inefficient at quickly and accurately communicating complex  ideas.
 
-As I shared in my last post, meetings don’t always work well for remote teams. Finding a meeting time that works across many timezones is near impossible. This often forces us to fall back on async communication tools that rely on writing such as Google Docs and Slack. But writing is horrendously inefficient at quickly and accurately communicating complex ideas. It’s a low throughput medium that requires significant time and effort to properly distill our thoughts. 
+As I shared in my last post, meetings don’t always work well for remote teams. Finding a meeting time that works across many timezones is near impossible. This often forces us to fall back on async communication tools that rely on writing such as Google Docs and Slack. But writing is horrendously inefficient at quickly and accurately communicating complex ideas. It’s a low throughput medium that requires significant time and effort to properly distill our thoughts.
 
 Remote work is new to all of us. Even those of us who have done it for a while don’t have it all figured out. The processes and tools for in-person collaboration and communication have been refined over hundreds of years while those for remote communication have only had about a decade of evolution. That means there’s plenty of opportunity for innovation in the processes and tools surrounding remote work. We must explore new ways of working if we are to discover what works best in this brave new remote-first world.
 
@@ -70,4 +70,4 @@ Writing still has many valid uses, but it’s no longer our only tool for sharin
 
 ***
 
-If you're wondering how to use Loom for your specific type of work, there are some awesome examples on Loom's Website: \[Loom Use Cases\]([https://www.loom.com/use-cases](https://www.loom.com/use-cases "https://www.loom.com/use-cases")).
+If you're wondering how to use Loom for your specific type of work, there are some awesome examples on Loom's Website: [Loom Use Cases](https://www.loom.com/use-cases).
