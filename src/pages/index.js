@@ -171,13 +171,13 @@ const HomePage = ({ data, location }) => {
         <p>
           I currently work at{' '}
           <a
-            href="https://manifold.co"
+            href="https://getkard.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Manifold
+            Kard
           </a>{' '}
-          building marketplaces for cloud services and APIs.
+          building tools for managing credit card rewards programs.
         </p>
       </Section>
       <hr />
