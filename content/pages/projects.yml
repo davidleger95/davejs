@@ -39,7 +39,7 @@ projects:
   image: "../assets/taco-truck.gif"
 - title: Music I Listen To
   description: A collection of twelve albums that I throughly enjoy.
-  url: https://music.davidleger.me
+  url: https://music.davejs.dev
   tags:
   - css
   - react
