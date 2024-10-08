@@ -38,7 +38,7 @@ projects:
   - design
   image: "../assets/taco-truck.gif"
 - title: Music I Listen To
-  description: A collection of twelve albums that I throughly enjoy.
+  description: A collection of twelve albums that I thoroughly enjoy.
   url: https://music.davejs.dev
   tags:
   - css
